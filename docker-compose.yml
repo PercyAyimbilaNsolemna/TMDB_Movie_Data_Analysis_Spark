@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  spark:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: spark-project
+    ports:
+      - "8888:8888"
+      - "4040:4040"
+    volumes:
+      - ./Notebook:/Notebook
+      - ./data:/data
+    command: start-notebook.sh
