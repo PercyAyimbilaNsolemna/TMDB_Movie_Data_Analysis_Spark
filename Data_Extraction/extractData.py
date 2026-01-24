@@ -13,7 +13,7 @@ class ApiRequestError(Exception):
     pass
 
 
-def extractDataFromAPI(session: Optional[requests.Session], 
+def extractDataFromAPIOld(session: Optional[requests.Session], 
                        url: str, 
                        API_KEY: str,
                        movie_ids: list,
@@ -113,6 +113,55 @@ def extractDataFromAPI(session: Optional[requests.Session],
     df.to_csv(output_path, index=False)
 
     print(f"Movie data saved to: {output_path}")
+
+
+def extractDataFromAPI(
+    session: Optional[requests.Session],
+    url: str,
+    API_KEY: str,
+    movie_ids: list,
+    output_path: str = "../data/movieData.json"
+):
+    if not url or not API_KEY:
+        raise ValueError("URL and API Key required")
+
+    headers = {
+        "Authorization": f"Bearer {API_KEY}",
+        "Accept": "application/json"
+    }
+
+    params = {
+        "language": "en-US",
+        "append_to_response": "credits"
+    }
+
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+
+    with open(output_path, "w", encoding="utf-8") as f:
+        for movie_id in movie_ids:
+            endpoint = f"{url}/{movie_id}"
+
+            try:
+                response = session.get(
+                    endpoint,
+                    headers=headers,
+                    params=params,
+                    timeout=10
+                )
+                if response.status_code != 200:
+                    continue
+
+                json_data = response.json()
+
+                # WRITE RAW JSON (1 record per line)
+                f.write(json.dumps(json_data) + "\n")
+
+            except requests.exceptions.RequestException:
+                continue
+
+    print(f"Raw TMDB JSON saved to {output_path}")
+
+
 
     
 
