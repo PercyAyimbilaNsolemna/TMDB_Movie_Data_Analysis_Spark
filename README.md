@@ -375,6 +375,21 @@ cd TMDB_Movie_Data_Analysis_Spark
 
 # Start docker
 docker compose up --build
+
+# Copy lab token
+Copy the lab token generated after docker id done building
+
+Click on Select kernrl in the notebook
+
+Click on Existing Jupyter Server
+
+Paste the lab token generated
+
+Press Enter to select the IP generated 
+
+Click on Python 3 to get connected to the lab server
+
+All is set up to start running the notebook
 ```
 
 ---
