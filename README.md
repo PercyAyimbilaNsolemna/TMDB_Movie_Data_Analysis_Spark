@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎬 TMDB Movie Data Analysis with PySpark
+#  TMDB Movie Data Analysis with PySpark
 
 ### *Scalable Big Data Analytics for Cinema Intelligence*
 
@@ -27,18 +27,18 @@
 <tr>
 <td width="50%">
 
-### 💡 **What Makes This Special?**
+###  **What Makes This Special?**
 
-- ⚡ **Scalable Architecture** - Built Spark-first for big data processing
-- 🎯 **Industry-Grade KPIs** - Real-world performance metrics
-- 🔍 **Advanced Analytics** - Complex multi-dimensional queries
-- 📊 **Publication-Ready Visuals** - Professional data storytelling
-- 🎞️ **Franchise Intelligence** - Deep dive into cinematic universes
+-  **Scalable Architecture** - Built Spark-first for big data processing
+-  **Industry-Grade KPIs** - Real-world performance metrics
+-  **Advanced Analytics** - Complex multi-dimensional queries
+-  **Publication-Ready Visuals** - Professional data storytelling
+-  **Franchise Intelligence** - Deep dive into cinematic universes
 
 </td>
 <td width="50%">
 
-### 🎯 **Core Capabilities**
+###  **Core Capabilities**
 
 ```python
 ✓ Financial performance analysis
@@ -59,7 +59,7 @@
 
 <div align="center">
 
-| 🎬 **Movie Performance** | 🏆 **Entity Ranking** | 🔍 **Advanced Search** | 📈 **Trend Analysis** |
+|  **Movie Performance** |  **Entity Ranking** |  **Advanced Search** |  **Trend Analysis** |
 |:---:|:---:|:---:|:---:|
 | Financial KPIs | Top Franchises | Multi-filter Queries | Revenue Over Time |
 | Popularity Metrics | Leading Directors | Cast & Crew Search | Rating Trends |
@@ -78,7 +78,7 @@
 📄 **Raw Data** → ⚡ **Apache Spark** *(Ingestion)* → 🔍 **Spark SQL** *(Processing)* → 📊 **Pandas** *(Aggregation)* → 📈 **Matplotlib** *(Visualization)*
 
 <details>
-<summary>📊 <b>View Interactive Diagram</b></summary>
+<summary> <b>View Interactive Diagram</b></summary>
 
 ```mermaid
 graph LR
@@ -106,22 +106,22 @@ graph LR
 <th>Purpose</th>
 </tr>
 <tr>
-<td>🔥 Processing Engine</td>
+<td> Processing Engine</td>
 <td>Apache Spark (PySpark)</td>
 <td>Distributed data processing at scale</td>
 </tr>
 <tr>
-<td>🧮 Analytics</td>
+<td> Analytics</td>
 <td>Spark SQL, Window Functions, UDFs</td>
 <td>Complex aggregations & transformations</td>
 </tr>
 <tr>
-<td>📊 Visualization</td>
+<td> Visualization</td>
 <td>Pandas + Matplotlib</td>
 <td>High-quality visual analytics</td>
 </tr>
 <tr>
-<td>💻 Language</td>
+<td> Language</td>
 <td>Python 3.9+</td>
 <td>Development & scripting</td>
 </tr>
@@ -132,26 +132,40 @@ graph LR
 ## 📂 **Project Architecture**
 
 ```
-🎬 TMDB_Movie_Data_Analysis_Spark/
+ TMDB_Movie_Data_Analysis_Spark/
 │
-├── 📊 Data_Analysis/
-│   ├── 🧹 dataCleaning.py          → Data preprocessing & quality checks
-│   ├── 📈 kpiAnalysis.py           → KPI computation & ranking engine
-│   ├── 🔍 advancedQueries.py       → Complex filtering & search logic
-│   ├── 🎞️  franchiseAnalysis.py     → Franchise performance comparisons
-│   └── 📉 dataVisualization.py     → Professional plotting functions
+├──  Data_Analysis/         
+│   └──  dataVisualization.py     → Professional plotting functions
 │
-├── ⚙️  config/
-│   └── 🔧 config.py                → Spark & environment configuration
+├── Data_Extraction
+|   ├──   extractData.py
+|   
+├──  Data_Cleaning
+|    ├── convertArray.py
+|    ├── removeColumns.py
+|
+|
+├──  config
+|    ├── config.py
+|
+├──   config/
+│   └──  config.py                → Spark & environment configuration
 │
-├── 📓 notebooks/
-│   └── 🧪 analysis.ipynb           → Interactive exploration workspace
+├──  notebooks/
+│   └──  movieAnalysis.ipynb           → Interactive exploration workspace
 │
-├── 💾 data/
-│   └── 📁 tmdb_movies.csv          → Raw TMDB dataset
+├──  data/
+│   └── movieData.json         → Raw TMDB dataset
 │
-├── 📖 README.md
-└── 📦 requirements.txt
+├──  logs
+|
+├──  docker-compose.yml
+|
+├──  Dockerfile
+|
+├──  README.md
+|
+└──  requirements.txt
 ```
 
 ---
@@ -180,7 +194,7 @@ graph LR
 <tr>
 <td width="50%">
 
-**📊 Computed Metrics**
+**Computed Metrics**
 - `Profit = Revenue - Budget`
 - `ROI = Revenue / Budget`
 - `Profit Margin = Profit / Revenue`
@@ -188,7 +202,7 @@ graph LR
 </td>
 <td width="50%">
 
-**🔍 Extracted Features**
+**Extracted Features**
 - Genre classification
 - Director identification
 - Cast & character mapping
@@ -202,7 +216,7 @@ graph LR
 
 <div align="center">
 
-| 💰 Financial KPIs | 📊 Performance KPIs | ⭐ Quality KPIs |
+|  Financial KPIs |  Performance KPIs |  Quality KPIs |
 |:---|:---|:---|
 | • Highest/Lowest Revenue | • Most Popular Movies | • Highest/Lowest Rated |
 | • Highest/Lowest Budget | • Most Voted Movies | • Rating Distribution |
@@ -223,7 +237,7 @@ graph LR
 <tr>
 <td>
 
-**🎯 Query Examples**
+**Query Examples**
 
 ```sql
 -- Best-rated Sci-Fi Action with Bruce Willis
@@ -253,20 +267,20 @@ Cast: Uma Thurman
 
 ---
 
-## 🎞️ **Franchise vs Standalone Intelligence**
+##  **Franchise vs Standalone Intelligence**
 
 <div align="center">
 
 ### **Comparative Performance Analysis**
 
-| Metric | 🎬 Franchise Movies | 🎥 Standalone Movies |
+| Metric |  Franchise Movies |  Standalone Movies |
 |:---|:---:|:---:|
 | **Classification** | `belongs_to_collection != NULL` | `belongs_to_collection == NULL` |
-| **Mean Revenue** | 📈 Higher | 📉 Lower |
-| **Median ROI** | 💰 Optimized | 💸 Variable |
-| **Mean Budget** | 💵 Larger | 💴 Smaller |
-| **Mean Popularity** | ⭐ Higher | ⭐ Lower |
-| **Audience Rating** | ⭐⭐⭐⭐ Consistent | ⭐⭐⭐ Mixed |
+| **Mean Revenue** |  Higher |  Lower |
+| **Median ROI** |  Optimized |  Variable |
+| **Mean Budget** |  Larger |  Smaller |
+| **Mean Popularity** |  Higher |  Lower |
+| **Audience Rating** |  Consistent |  Mixed |
 
 </div>
 
@@ -280,26 +294,26 @@ Cast: Uma Thurman
 <tr>
 <td width="50%">
 
-### **🎥 Top Franchises**
+### **Top Franchises**
 
 **Ranking Criteria:**
-- 📊 Total movie count
-- 💰 Aggregate revenue
-- 📈 Mean revenue per film
-- 💵 Total & mean budget
-- ⭐ Average audience rating
+- Total movie count
+- Aggregate revenue
+- Mean revenue per film
+- Total & mean budget
+- Average audience rating
 
 </td>
 <td width="50%">
 
-### **🎬 Leading Directors**
+### **Leading Directors**
 
 **Ranking Criteria:**
-- 🎞️ Number of films directed
-- 💰 Total box office revenue
-- 📊 Commercial success rate
-- ⭐ Average critical rating
-- 🎯 Genre diversity
+- Number of films directed
+- Total box office revenue
+- Commercial success rate
+- Average critical rating
+- Genre diversity
 
 </td>
 </tr>
@@ -317,7 +331,7 @@ Cast: Uma Thurman
 
 </div>
 
-**📈 Available Visualizations:**
+**Available Visualizations:**
 
 ```
 ✓ Revenue vs Budget Scatter Analysis
@@ -329,7 +343,7 @@ Cast: Uma Thurman
 ✓ Genre Market Share Evolution
 ```
 
-**🎨 Design Principles:**
+**Design Principles:**
 - Clear axis labeling
 - Professional color schemes
 - Grid alignment for readability
@@ -349,7 +363,6 @@ Cast: Uma Thurman
 |:---:|:---:|
 | Python | 3.9+ |
 | Apache Spark | 3.0+ |
-| Memory | 4GB+ RAM |
 
 </div>
 
@@ -360,38 +373,9 @@ Cast: Uma Thurman
 git clone https://github.com/yourusername/TMDB_Movie_Data_Analysis_Spark.git
 cd TMDB_Movie_Data_Analysis_Spark
 
-# Install dependencies
-pip install -r requirements.txt
+# Start docker
+docker compose up --build
 ```
-
-### **Execution Options**
-
-<table>
-<tr>
-<td width="50%">
-
-**🚀 Production Mode**
-
-```bash
-spark-submit \
-  --master local[*] \
-  --driver-memory 4g \
-  main.py
-```
-
-</td>
-<td width="50%">
-
-**🧪 Interactive Mode**
-
-```bash
-jupyter notebook \
-  notebooks/analysis.ipynb
-```
-
-</td>
-</tr>
-</table>
 
 ---
 
@@ -401,11 +385,11 @@ jupyter notebook \
 
 | Finding | Impact |
 |:---|:---:|
-| 🎬 Franchise movies generate **2.3x** higher average revenue | 🔥 High |
-| 💰 ROI peaks at **$30-50M** budget range | 📊 Medium |
-| ⭐ Rating and popularity show **weak correlation** (r=0.23) | 🔍 Insight |
-| 📅 Post-2010 movies show **declining ROI** trends | ⚠️ Warning |
-| 🎯 Action + Adventure combo yields **highest ROI** | 💡 Strategy |
+|  Franchise movies generate **2.3x** higher average revenue |  High |
+|  ROI peaks at **$30-50M** budget range |  Medium |
+|  Rating and popularity show **weak correlation** (r=0.23) |  Insight |
+|  Post-2010 movies show **declining ROI** trends |  Warning |
+|  Action + Adventure combo yields **highest ROI** |  Strategy |
 
 </div>
 
@@ -417,11 +401,11 @@ jupyter notebook \
 
 **Development Roadmap:**
 
-🔵 **Current State** →  
-├─ 🤖 **Spark ML Integration** → 🎯 *Predictive Modeling*  
-├─ 📊 **Interactive Dashboards** → 🎯 *Real-time Analytics*  
-├─ 🔄 **Automated ETL Pipeline** → 🎯 *Production Deployment*  
-└─ 📺 **Streaming Platform Analysis** → 🎯 *Comprehensive Coverage*
+ **Current State** →  
+├─  **Spark ML Integration** →  *Predictive Modeling*  
+├─  **Interactive Dashboards** →  *Real-time Analytics*  
+├─  **Automated ETL Pipeline** →  *Production Deployment*  
+└─  **Streaming Platform Analysis** →  *Comprehensive Coverage*
 
 <details>
 <summary>🗺️ <b>View Full Roadmap Diagram</b></summary>
@@ -453,12 +437,12 @@ graph TD
 
 **Planned Enhancements:**
 
-- 🤖 **Machine Learning**: Revenue prediction models using Spark MLlib
-- 📊 **Interactive Dashboards**: Plotly/Streamlit integration for real-time exploration
-- 🔄 **ETL Automation**: Apache Airflow pipeline orchestration
-- 📺 **Platform Expansion**: Netflix, Disney+, Prime Video analytics
-- 🌐 **API Development**: RESTful endpoints for query access
-- ☁️ **Cloud Deployment**: AWS EMR / Databricks integration
+-  **Machine Learning**: Revenue prediction models using Spark MLlib
+-  **Interactive Dashboards**: Plotly/Streamlit integration for real-time exploration
+-  **ETL Automation**: Apache Airflow pipeline orchestration
+-  **Platform Expansion**: Netflix, Disney+, Prime Video analytics
+-  **API Development**: RESTful endpoints for query access
+-  **Cloud Deployment**: AWS EMR / Databricks integration
 
 ---
 
