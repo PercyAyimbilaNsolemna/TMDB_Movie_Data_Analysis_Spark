@@ -362,7 +362,7 @@ Cast: Uma Thurman
 | Requirement | Version |
 |:---:|:---:|
 | Python | 3.9+ |
-| Apache Spark | 3.0+ |
+| Docker | Latest version |
 
 </div>
 
@@ -370,7 +370,7 @@ Cast: Uma Thurman
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/TMDB_Movie_Data_Analysis_Spark.git
+git clone https://github.com/PercyAyimbilaNsolemna/TMDB_Movie_Data_Analysis_Spark.git
 cd TMDB_Movie_Data_Analysis_Spark
 
 # Start docker
