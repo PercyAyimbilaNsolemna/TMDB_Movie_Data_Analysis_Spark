@@ -1,0 +1,46 @@
+2026-01-28 14:14:32,712 - movie_performance_kpis - INFO - Starting Movie Performance KPIs computation
+2026-01-28 14:14:32,716 - movie_performance_kpis - INFO - Adding derived columns: profit and ROI
+2026-01-28 14:16:59,324 - movie_performance_kpis - INFO - Starting Movie Performance KPIs computation
+2026-01-28 14:16:59,325 - movie_performance_kpis - INFO - Adding derived columns: profit and ROI
+2026-01-28 14:19:19,059 - movie_performance_kpis - INFO - Starting Movie Performance KPIs computation
+2026-01-28 14:19:19,064 - movie_performance_kpis - INFO - Adding derived columns: profit and ROI
+2026-01-28 14:19:19,186 - movie_performance_kpis - INFO - Computing revenue and budget rankings
+2026-01-28 14:19:19,259 - movie_performance_kpis - INFO - Computing profit-based KPIs
+2026-01-28 14:19:19,311 - movie_performance_kpis - INFO - Computing ROI-based KPIs (budget >= 10M)
+2026-01-28 14:21:46,814 - movie_performance_kpis - INFO - Starting Movie Performance KPIs computation
+2026-01-28 14:21:46,816 - movie_performance_kpis - INFO - Adding derived columns: profit and ROI
+2026-01-28 14:21:46,867 - movie_performance_kpis - INFO - Computing revenue and budget rankings
+2026-01-28 14:21:46,891 - movie_performance_kpis - INFO - Computing profit-based KPIs
+2026-01-28 14:21:46,911 - movie_performance_kpis - INFO - Computing ROI-based KPIs (budget >= 10M)
+2026-01-28 14:29:06,340 - movie_performance_kpis - INFO - Starting Movie Performance KPIs computation
+2026-01-28 14:29:06,344 - movie_performance_kpis - INFO - Adding derived columns: profit and ROI
+2026-01-28 14:29:06,386 - movie_performance_kpis - INFO - Computing revenue and budget rankings
+2026-01-28 14:29:06,415 - movie_performance_kpis - INFO - Computing profit-based KPIs
+2026-01-28 14:29:06,432 - movie_performance_kpis - INFO - Computing ROI-based KPIs (budget >= 10M)
+2026-01-28 14:29:06,449 - movie_performance_kpis - INFO - Computing votes and ratings KPIs
+2026-01-28 14:29:06,498 - movie_performance_kpis - INFO - Computing popularity KPI
+2026-01-28 14:29:06,517 - movie_performance_kpis - INFO - Movie Performance KPIs completed in 0.18 seconds
+2026-01-28 17:58:07,910 - movie_performance_kpis - INFO - Starting Movie Performance KPIs computation
+2026-01-28 17:58:07,912 - movie_performance_kpis - INFO - Adding derived columns: profit and ROI
+2026-01-28 17:58:08,136 - movie_performance_kpis - INFO - Computing revenue and budget rankings
+2026-01-28 17:58:08,174 - movie_performance_kpis - INFO - Computing profit-based KPIs
+2026-01-28 17:58:08,203 - movie_performance_kpis - INFO - Computing ROI-based KPIs (budget >= 10M)
+2026-01-28 17:58:08,250 - movie_performance_kpis - INFO - Computing votes and ratings KPIs
+2026-01-28 17:58:08,306 - movie_performance_kpis - INFO - Computing popularity KPI
+2026-01-28 17:58:08,319 - movie_performance_kpis - INFO - Movie Performance KPIs completed in 0.41 seconds
+2026-01-28 17:59:57,038 - movie_performance_kpis - INFO - Starting Movie Performance KPIs computation
+2026-01-28 17:59:57,041 - movie_performance_kpis - INFO - Adding derived columns: profit and ROI
+2026-01-28 17:59:57,116 - movie_performance_kpis - INFO - Computing revenue and budget rankings
+2026-01-28 17:59:57,138 - movie_performance_kpis - INFO - Computing profit-based KPIs
+2026-01-28 17:59:57,179 - movie_performance_kpis - INFO - Computing ROI-based KPIs (budget >= 10M)
+2026-01-28 17:59:57,241 - movie_performance_kpis - INFO - Computing votes and ratings KPIs
+2026-01-28 17:59:57,323 - movie_performance_kpis - INFO - Computing popularity KPI
+2026-01-28 17:59:57,337 - movie_performance_kpis - INFO - Movie Performance KPIs completed in 0.30 seconds
+2026-01-28 21:41:16,495 - movie_performance_kpis - INFO - Starting Movie Performance KPIs computation
+2026-01-28 21:41:16,499 - movie_performance_kpis - INFO - Adding derived columns: profit and ROI
+2026-01-28 21:41:16,628 - movie_performance_kpis - INFO - Computing revenue and budget rankings
+2026-01-28 21:41:16,720 - movie_performance_kpis - INFO - Computing profit-based KPIs
+2026-01-28 21:41:16,759 - movie_performance_kpis - INFO - Computing ROI-based KPIs (budget >= 10M)
+2026-01-28 21:41:16,841 - movie_performance_kpis - INFO - Computing votes and ratings KPIs
+2026-01-28 21:41:16,926 - movie_performance_kpis - INFO - Computing popularity KPI
+2026-01-28 21:41:16,941 - movie_performance_kpis - INFO - Movie Performance KPIs completed in 0.45 seconds
