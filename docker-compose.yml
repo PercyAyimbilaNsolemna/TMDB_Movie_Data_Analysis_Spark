@@ -10,5 +10,7 @@ services:
       - "4040:4040"
     volumes:
       - ./Notebook:/Notebook
+      - ./src:/src
       - ./data:/data
+      - ./logs:/logs
     command: start-notebook.sh
