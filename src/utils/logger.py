@@ -2,7 +2,9 @@ import os
 import sys
 import logging
 
-
+# --------------------------------------------------
+# Logger setup (robust for notebooks + Docker)
+# --------------------------------------------------
 def setup_logger(
     name: str,
     log_file: str,
