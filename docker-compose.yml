@@ -13,4 +13,5 @@ services:
       - ./src:/src
       - ./data:/data
       - ./logs:/logs
+      - ./src:/src
     command: start-notebook.sh
