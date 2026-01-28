@@ -1,43 +1,17 @@
 #!/usr/bin/env python3
 # data_cleaning_spark.py
 
-import os
-import sys
-import logging
 from pyspark.sql import SparkSession
 from pyspark.sql import functions as F
-
-
-# --------------------------------------------------
-# Logger setup (robust for notebooks + Docker)
-# --------------------------------------------------
-def setup_logger(log_file: str):
-    logger = logging.getLogger("preprocessing")
-    logger.setLevel(logging.INFO)
-
-    if not logger.handlers:
-        formatter = logging.Formatter(
-            "%(asctime)s - %(levelname)s - %(message)s"
-        )
-
-        # File handler
-        file_handler = logging.FileHandler(log_file)
-        file_handler.setFormatter(formatter)
-
-        # Console handler (for notebook visibility)
-        stream_handler = logging.StreamHandler(sys.stdout)
-        stream_handler.setFormatter(formatter)
-
-        logger.addHandler(file_handler)
-        logger.addHandler(stream_handler)
-
-    return logger
+from src.utils.logger import setup_logger
+from src.schemas.raw_data_schema import raw_movie_schema
+from src.schemas.cleaned_movie_schema import cleaned_movie_schema
 
 
 # --------------------------------------------------
 # Main preprocessing function
 # --------------------------------------------------
-def preprocessing(filepath="/data/raw_data/movieData.json"):
+def preprocessing(spark, filepath="/data/raw_data/movieData.json"):
     """
     Cleans and preprocesses TMDB movie data using Spark.
 
@@ -55,26 +29,12 @@ def preprocessing(filepath="/data/raw_data/movieData.json"):
     # -----------------------------
     # Logging setup
     # -----------------------------
-    log_dir = "/logs"
-    os.makedirs(log_dir, exist_ok=True)
-    log_file = os.path.join(log_dir, "data_cleaning.log")
+    logger = setup_logger(
+        name="preprocessing",
+        log_file="/logs/data_cleaning.log"
+    )
 
-    logger = setup_logger(log_file)
     logger.info("========== STARTING DATA PREPROCESSING ==========")
-
-    # -----------------------------
-    # Initialize Spark
-    # -----------------------------
-    try:
-        spark = (
-            SparkSession.builder
-            .appName("TMDB Movie Data Analysis - Preprocessing")
-            .getOrCreate()
-        )
-        logger.info("Spark session started successfully.")
-    except Exception as e:
-        logger.error(f"Failed to start Spark session: {e}", exc_info=True)
-        raise
 
     # -----------------------------
     # Load raw data
@@ -82,7 +42,7 @@ def preprocessing(filepath="/data/raw_data/movieData.json"):
     try:
         movie_data = (
             spark.read
-            .option("inferSchema", "true")
+            .schema(raw_movie_schema())
             .json(filepath)
         )
         logger.info(f"Data loaded from {filepath}")
@@ -280,7 +240,14 @@ def preprocessing(filepath="/data/raw_data/movieData.json"):
     output_path = "/data/cleaned_movie_data"
 
     try:
-        movie_data.coalesce(1).write.mode("overwrite").parquet(output_path)
+        (
+            movie_data
+            .select([f.name for f in cleaned_movie_schema().fields])
+            .write
+            .mode("overwrite")
+            .parquet(output_path)
+        )
+
         logger.info(f"Cleaned data saved to {output_path}")
     except Exception as e:
         logger.error("Failed to save parquet data", exc_info=True)
@@ -288,10 +255,8 @@ def preprocessing(filepath="/data/raw_data/movieData.json"):
         raise
 
     # -----------------------------
-    # Stop Spark
+    # Return the output path
     # -----------------------------
-    spark.stop()
-    logger.info("Spark session stopped.")
     logger.info("========== DATA PREPROCESSING COMPLETED ==========")
 
     return output_path
