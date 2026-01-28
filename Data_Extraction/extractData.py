@@ -17,7 +17,7 @@ def extractDataFromAPIOld(session: Optional[requests.Session],
                        url: str, 
                        API_KEY: str,
                        movie_ids: list,
-                       output_path: str = "../data/movieData.csv") -> None:
+                       output_path: str = "/data/raw_data/movieData.csv") -> None:
     
     """
 
@@ -120,7 +120,7 @@ def extractDataFromAPI(
     url: str,
     API_KEY: str,
     movie_ids: list,
-    output_path: str = "../data/movieData.json"
+    output_path: str = "../data/raw_data/movieData.json"
 ):
     if not url or not API_KEY:
         raise ValueError("URL and API Key required")
