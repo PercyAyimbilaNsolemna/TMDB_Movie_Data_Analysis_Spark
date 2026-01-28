@@ -1,18 +1,48 @@
-2026-01-24 06:16:36,725 - INFO - Spark session started successfully.
-2026-01-24 06:16:39,645 - INFO - Data loaded successfully from ../data/movieData.json
-2026-01-24 06:16:40,570 - INFO - Initial row count: 18
-2026-01-24 06:16:40,628 - INFO - Dropped irrelevant columns: ['adult', 'imdb_id', 'original_title', 'video', 'homepage']
-2026-01-24 06:16:41,083 - INFO - Parsed JSON-like array columns into pipe-separated strings using Spark SQL functions.
-2026-01-24 06:16:41,156 - INFO - Extracted directors and calculated crew/cast sizes.
-2026-01-24 06:16:41,848 - INFO - Converted datatypes and scaled budget/revenue to million USD.
-2026-01-24 06:16:42,038 - INFO - Handled unrealistic values and placeholder text.
-2026-01-24 06:16:42,072 - INFO - Removed duplicates and rows with null id or title.
-2026-01-24 06:16:43,075 - INFO - Row count after duplicates removal: 18
-2026-01-24 06:16:43,376 - INFO - Kept only rows with at least 10 non-null columns.
-2026-01-24 06:16:45,334 - INFO - Row count after non-null filtering: 18
-2026-01-24 06:16:45,358 - INFO - Filtered to only include 'Released' movies.
-2026-01-24 06:16:46,161 - INFO - Row count after filtering released movies: 18
-2026-01-24 06:16:46,196 - INFO - Reordered columns and dropped extras.
-2026-01-24 06:16:47,154 - ERROR - Failed to save cleaned data: [PATH_ALREADY_EXISTS] Path file:/C:/Users/AyimbilaNsolemnaPerc/Desktop/LABS/DEM05/TMDB_Movie_Data_Analysis_Spark/data/movieData_cleaned already exists. Set mode as "overwrite" to overwrite the existing path. SQLSTATE: 42K04
-2026-01-24 06:16:47,444 - INFO - Spark session stopped. Data cleaning process completed.
-2026-01-24 06:16:47,461 - INFO - Closing down clientserver connection
+2026-01-28 09:13:40,537 - INFO - ========== STARTING DATA PREPROCESSING ==========
+2026-01-28 09:13:47,565 - INFO - Spark session started successfully.
+2026-01-28 09:14:00,271 - INFO - Data loaded from /data/movieData.json
+2026-01-28 09:14:02,751 - INFO - Initial row count: 18
+2026-01-28 09:14:02,954 - INFO - Dropped irrelevant columns: ['adult', 'backdrop_path', 'origin_country', 'original_title', 'imdb_id', 'video', 'homepage']
+2026-01-28 09:14:03,977 - INFO - Parsed array-based columns successfully.
+2026-01-28 09:14:04,653 - INFO - Extracted director, cast, crew_size, cast_size.
+2026-01-28 09:14:05,148 - INFO - Converted datatypes and scaled budget/revenue.
+2026-01-28 09:14:05,493 - INFO - Handled unrealistic values and placeholders.
+2026-01-28 09:14:07,686 - INFO - Row count after deduplication: 18
+2026-01-28 09:14:11,304 - INFO - Row count after non-null filtering: 18
+2026-01-28 09:14:13,184 - INFO - Row count after Released filter: 18
+2026-01-28 09:14:13,334 - INFO - Reordered and finalized columns.
+2026-01-28 09:14:20,840 - INFO - Cleaned data saved to /data/cleaned_movie_data
+2026-01-28 09:14:21,340 - INFO - Spark session stopped.
+2026-01-28 09:14:21,343 - INFO - ========== DATA PREPROCESSING COMPLETED ==========
+2026-01-28 09:24:42,919 - INFO - ========== STARTING DATA PREPROCESSING ==========
+2026-01-28 09:24:42,927 - INFO - Spark session started successfully.
+2026-01-28 09:24:43,346 - INFO - Data loaded from /data/movieData.json
+2026-01-28 09:24:43,573 - INFO - Initial row count: 18
+2026-01-28 09:24:43,602 - INFO - Dropped irrelevant columns: ['adult', 'backdrop_path', 'origin_country', 'original_title', 'imdb_id', 'video', 'homepage']
+2026-01-28 09:24:43,838 - INFO - Parsed array-based columns successfully.
+2026-01-28 09:24:44,048 - INFO - Extracted director, cast, crew_size, cast_size.
+2026-01-28 09:24:44,296 - INFO - Converted datatypes and scaled budget/revenue.
+2026-01-28 09:24:44,527 - INFO - Handled unrealistic values and placeholders.
+2026-01-28 09:24:45,987 - INFO - Row count after deduplication: 18
+2026-01-28 09:24:48,757 - INFO - Row count after non-null filtering: 18
+2026-01-28 09:24:49,900 - INFO - Row count after Released filter: 18
+2026-01-28 09:24:50,112 - INFO - Reordered and finalized columns.
+2026-01-28 09:24:54,659 - INFO - Cleaned data saved to /data/cleaned_movie_data
+2026-01-28 09:24:55,241 - INFO - Spark session stopped.
+2026-01-28 09:24:55,243 - INFO - ========== DATA PREPROCESSING COMPLETED ==========
+2026-01-28 09:25:04,279 - INFO - ========== STARTING DATA PREPROCESSING ==========
+2026-01-28 09:25:04,519 - INFO - Spark session started successfully.
+2026-01-28 09:25:04,890 - INFO - Data loaded from /data/raw_data/movieData.json
+2026-01-28 09:25:05,271 - INFO - Initial row count: 18
+2026-01-28 09:25:05,305 - INFO - Dropped irrelevant columns: ['adult', 'backdrop_path', 'origin_country', 'original_title', 'imdb_id', 'video', 'homepage']
+2026-01-28 09:25:05,419 - INFO - Parsed array-based columns successfully.
+2026-01-28 09:25:05,611 - INFO - Extracted director, cast, crew_size, cast_size.
+2026-01-28 09:25:05,790 - INFO - Converted datatypes and scaled budget/revenue.
+2026-01-28 09:25:05,977 - INFO - Handled unrealistic values and placeholders.
+2026-01-28 09:25:06,851 - INFO - Row count after deduplication: 18
+2026-01-28 09:25:08,307 - INFO - Row count after non-null filtering: 18
+2026-01-28 09:25:09,014 - INFO - Row count after Released filter: 18
+2026-01-28 09:25:09,082 - INFO - Reordered and finalized columns.
+2026-01-28 09:25:11,100 - INFO - Cleaned data saved to /data/cleaned_movie_data
+2026-01-28 09:25:11,506 - INFO - Spark session stopped.
+2026-01-28 09:25:11,509 - INFO - ========== DATA PREPROCESSING COMPLETED ==========
