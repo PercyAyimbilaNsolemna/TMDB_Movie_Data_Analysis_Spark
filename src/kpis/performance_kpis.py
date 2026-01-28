@@ -61,8 +61,10 @@ def movie_performance_kpis(df: DataFrame) -> dict:
     # -----------------------------
     logger.info("Computing ROI-based KPIs (budget >= 10M)")
 
-    results["highest_roi"] = df_metrics.orderBy(F.col("roi").desc())
-    results["lowest_roi"] = df_metrics.orderBy(F.col("roi").asc())
+    roi_df = df_metrics.filter(F.col("budget_musd") >= 10)
+
+    results["highest_roi"] = roi_df.orderBy(F.col("roi").desc())
+    results["lowest_roi"] = roi_df.orderBy(F.col("roi").asc())
 
     # -----------------------------
     # Votes / Ratings KPIs
