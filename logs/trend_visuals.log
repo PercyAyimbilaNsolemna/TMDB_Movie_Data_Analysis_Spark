@@ -1,0 +1,12 @@
+2026-01-29 08:55:20,812 - trend_visuals - INFO - Starting trend visualization: budget_musd vs revenue_musd
+2026-01-29 08:55:22,093 - trend_visuals - INFO - Trend visualization saved to /data/visualizations/trend_budget_musd_vs_revenue_musd.png
+2026-01-29 08:55:38,169 - trend_visuals - INFO - Starting trend visualization: popularity vs vote_average
+2026-01-29 08:55:39,310 - trend_visuals - INFO - Trend visualization saved to /data/visualizations/trend_popularity_vs_vote_average.png
+2026-01-29 08:56:29,154 - trend_visuals - INFO - Starting trend visualization: budget_musd vs revenue_musd
+2026-01-29 08:56:30,049 - trend_visuals - INFO - Trend visualization saved to /data/visualizations/trend_budget_musd_vs_revenue_musd.png
+2026-01-29 08:56:30,226 - trend_visuals - INFO - Starting trend visualization: popularity vs vote_average
+2026-01-29 08:56:31,017 - trend_visuals - INFO - Trend visualization saved to /data/visualizations/trend_popularity_vs_vote_average.png
+2026-01-29 08:59:32,137 - trend_visuals - INFO - Starting trend visualization: budget_musd vs revenue_musd
+2026-01-29 08:59:33,391 - trend_visuals - INFO - Trend visualization saved to /data/visualizations/trend_budget_musd_vs_revenue_musd.png
+2026-01-29 08:59:33,625 - trend_visuals - INFO - Starting trend visualization: popularity vs vote_average
+2026-01-29 08:59:34,884 - trend_visuals - INFO - Trend visualization saved to /data/visualizations/trend_popularity_vs_vote_average.png

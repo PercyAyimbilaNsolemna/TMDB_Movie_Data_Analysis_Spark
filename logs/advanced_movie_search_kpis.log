@@ -23,3 +23,15 @@
 2026-01-28 18:00:17,684 - advanced_movie_search_kpis - INFO - Search 1: Sci-Fi Action movies starring Bruce Willis (sorted by rating)
 2026-01-28 18:00:17,742 - advanced_movie_search_kpis - INFO - Search 2: Uma Thurman movies directed by Quentin Tarantino
 2026-01-28 18:00:17,773 - advanced_movie_search_kpis - INFO - Advanced Movie Search KPIs completed in 0.09 seconds
+2026-01-29 08:51:33,434 - advanced_movie_search_kpis - INFO - Starting Advanced Movie Search KPIs
+2026-01-29 08:51:33,436 - advanced_movie_search_kpis - INFO - Search 1: Sci-Fi Action movies starring Bruce Willis (sorted by rating)
+2026-01-29 08:51:33,478 - advanced_movie_search_kpis - INFO - Search 2: Uma Thurman movies directed by Quentin Tarantino
+2026-01-29 08:51:33,508 - advanced_movie_search_kpis - INFO - Advanced Movie Search KPIs completed in 0.07 seconds
+2026-01-29 08:56:24,063 - advanced_movie_search_kpis - INFO - Starting Advanced Movie Search KPIs
+2026-01-29 08:56:24,064 - advanced_movie_search_kpis - INFO - Search 1: Sci-Fi Action movies starring Bruce Willis (sorted by rating)
+2026-01-29 08:56:24,100 - advanced_movie_search_kpis - INFO - Search 2: Uma Thurman movies directed by Quentin Tarantino
+2026-01-29 08:56:24,120 - advanced_movie_search_kpis - INFO - Advanced Movie Search KPIs completed in 0.06 seconds
+2026-01-29 08:59:25,684 - advanced_movie_search_kpis - INFO - Starting Advanced Movie Search KPIs
+2026-01-29 08:59:25,686 - advanced_movie_search_kpis - INFO - Search 1: Sci-Fi Action movies starring Bruce Willis (sorted by rating)
+2026-01-29 08:59:25,720 - advanced_movie_search_kpis - INFO - Search 2: Uma Thurman movies directed by Quentin Tarantino
+2026-01-29 08:59:25,742 - advanced_movie_search_kpis - INFO - Advanced Movie Search KPIs completed in 0.06 seconds

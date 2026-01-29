@@ -4,3 +4,21 @@
 2026-01-28 22:00:22,933 - director_success_kpis - INFO - Computing total revenue per director
 2026-01-28 22:00:22,979 - director_success_kpis - INFO - Computing mean rating per director
 2026-01-28 22:00:23,013 - director_success_kpis - INFO - Director Success KPIs completed in 0.29 seconds
+2026-01-29 08:55:03,077 - director_success_kpis - INFO - Starting Director Success KPI computation
+2026-01-29 08:55:03,079 - director_success_kpis - INFO - Aggregating director-level metrics
+2026-01-29 08:55:03,122 - director_success_kpis - INFO - Computing total number of movies per director
+2026-01-29 08:55:03,144 - director_success_kpis - INFO - Computing total revenue per director
+2026-01-29 08:55:03,168 - director_success_kpis - INFO - Computing mean rating per director
+2026-01-29 08:55:03,187 - director_success_kpis - INFO - Director Success KPIs completed in 0.11 seconds
+2026-01-29 08:56:27,834 - director_success_kpis - INFO - Starting Director Success KPI computation
+2026-01-29 08:56:27,838 - director_success_kpis - INFO - Aggregating director-level metrics
+2026-01-29 08:56:27,881 - director_success_kpis - INFO - Computing total number of movies per director
+2026-01-29 08:56:27,901 - director_success_kpis - INFO - Computing total revenue per director
+2026-01-29 08:56:27,919 - director_success_kpis - INFO - Computing mean rating per director
+2026-01-29 08:56:27,937 - director_success_kpis - INFO - Director Success KPIs completed in 0.10 seconds
+2026-01-29 08:59:30,439 - director_success_kpis - INFO - Starting Director Success KPI computation
+2026-01-29 08:59:30,441 - director_success_kpis - INFO - Aggregating director-level metrics
+2026-01-29 08:59:30,483 - director_success_kpis - INFO - Computing total number of movies per director
+2026-01-29 08:59:30,503 - director_success_kpis - INFO - Computing total revenue per director
+2026-01-29 08:59:30,550 - director_success_kpis - INFO - Computing mean rating per director
+2026-01-29 08:59:30,601 - director_success_kpis - INFO - Director Success KPIs completed in 0.16 seconds
