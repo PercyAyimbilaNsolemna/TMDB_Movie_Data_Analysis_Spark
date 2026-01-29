@@ -1,8 +1,24 @@
+import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+from src.utils.logger import setup_logger
 
-def trendVisuals(data: pd.DataFrame, column1: str, column2: str, title: str):
+def trendVisuals(data: pd.DataFrame, column1: str, column2: str, title: str, output_dir: str = "/data/visualizations"):
+     
+    # -----------------------------
+    # Logging setup
+    # -----------------------------
+    logger = setup_logger(
+        name="trend_visuals",
+        log_file="/logs/trend_visuals.log"
+        )
+
+    logger.info(f"Starting trend visualization: {column1} vs {column2}")
+
+    #Creates directory to save the plot as image
+    os.makedirs(output_dir, exist_ok=True)
+
     # Prepare data
     temp = data[[column1, column2]].dropna()
     x = temp[column1]
@@ -95,11 +111,32 @@ def trendVisuals(data: pd.DataFrame, column1: str, column2: str, title: str):
     plt.legend(loc="lower right", frameon=False)
     plt.grid(True, linestyle="--", alpha=0.35)
     plt.tight_layout()
+
+    filename = f"trend_{column1}_vs_{column2}.png"
+    filepath = os.path.join(output_dir, filename)
+
+    plt.savefig(filepath, dpi=300)
+
     plt.show()
+    plt.close()
+
+    logger.info(f"Trend visualization saved to {filepath}")
 
 
+def plot_yearly_box_office_trends(data: pd.DataFrame, output_dir: str = "/data/visualizations"):
 
-def plot_yearly_box_office_trends(data: pd.DataFrame):
+    # -----------------------------
+    # Logging setup
+    # -----------------------------
+    logger = setup_logger(
+        name="yearly_box_office_trends",
+        log_file="/logs/yearly_box_office_trends.log"
+    )
+
+    logger.info("Starting yearly box office trend visualization")
+
+    os.makedirs(output_dir, exist_ok=True)
+
     data = data.copy()
     data["release_year"] = pd.to_datetime(data["release_date"]).dt.year
     yearly = data.groupby("release_year")["revenue_musd"].mean()
@@ -173,13 +210,31 @@ def plot_yearly_box_office_trends(data: pd.DataFrame):
     plt.legend(frameon=False)
 
     plt.tight_layout()
+
+    filepath = os.path.join(output_dir, "yearly_box_office_trends.png")
+    plt.savefig(filepath, dpi=300)
+
     plt.show()
+    plt.close()
+
+    logger.info(f"Yearly box office trend saved to {filepath}")
 
 
 
-def plot_franchise_vs_standalone_metrics(data: pd.DataFrame):
-    import numpy as np
-    import matplotlib.pyplot as plt
+def plot_franchise_vs_standalone_metrics(data: pd.DataFrame, output_dir: str = "/data/visualizations"):
+
+    # -----------------------------
+    # Logging setup
+    # -----------------------------
+    logger = setup_logger(
+        name="franchise_vs_standalone",
+        log_file="/logs/franchise_vs_standalone.log"
+    )
+
+    logger.info("Starting franchise vs standalone visualization")
+
+    os.makedirs(output_dir, exist_ok=True)
+
 
     metrics = {
         "Revenue (M USD)": ("revenue_musd", "Mean Revenue"),
@@ -242,14 +297,21 @@ def plot_franchise_vs_standalone_metrics(data: pd.DataFrame):
     )
 
     plt.tight_layout(rect=[0, 0, 1, 0.95])
+
+    filepath = os.path.join(output_dir, "franchise_vs_standalone_metrics.png")
+    plt.savefig(filepath, dpi=300)
     plt.show()
+    plt.close()
+
+    logger.info(f"Franchise vs Standalone chart saved to {filepath}")
 
 
 
 def plot_roi_by_genre(
     data,
     top_n=15,
-    figsize=(12, 7)
+    figsize=(12, 7),
+    output_dir: str = "/data/visualizations"
 ):
     """
     Visualize Median ROI by Genre.
@@ -263,6 +325,18 @@ def plot_roi_by_genre(
     figsize : tuple
         Figure size
     """
+
+    # -----------------------------
+    # Logging setup
+    # -----------------------------
+    logger = setup_logger(
+        name="roi_by_genre",
+        log_file="/logs/roi_by_genre.log"
+    )
+
+    logger.info("Starting ROI by genre visualization")
+
+    os.makedirs(output_dir, exist_ok=True)
 
     # Defensive copy
     df = data.copy()
@@ -323,7 +397,13 @@ def plot_roi_by_genre(
 
     # Tight layout
     plt.tight_layout()
+    
+    filepath = os.path.join(output_dir, "median_roi_by_genre.png")
+    plt.savefig(filepath, dpi=300)
     plt.show()
+    plt.close()
+
+    logger.info(f"ROI by genre chart saved to {filepath}")
 
 
 
