@@ -43,3 +43,12 @@
 2026-01-29 08:59:27,420 - franchise_success_kpis - INFO - Computing mean revenue per franchise
 2026-01-29 08:59:27,440 - franchise_success_kpis - INFO - Computing mean rating per franchise
 2026-01-29 08:59:27,463 - franchise_success_kpis - INFO - Franchise Success KPIs completed in 0.21 seconds
+2026-02-09 15:12:46,095 - franchise_success_kpis - INFO - Starting Franchise Success KPI computation
+2026-02-09 15:12:46,097 - franchise_success_kpis - INFO - Aggregating franchise-level metrics
+2026-02-09 15:12:46,174 - franchise_success_kpis - INFO - Computing total number of movies per franchise
+2026-02-09 15:12:46,201 - franchise_success_kpis - INFO - Computing total budget per franchise
+2026-02-09 15:12:46,231 - franchise_success_kpis - INFO - Computing mean budget per franchise
+2026-02-09 15:12:46,275 - franchise_success_kpis - INFO - Computing total revenue per franchise
+2026-02-09 15:12:46,304 - franchise_success_kpis - INFO - Computing mean revenue per franchise
+2026-02-09 15:12:46,331 - franchise_success_kpis - INFO - Computing mean rating per franchise
+2026-02-09 15:12:46,358 - franchise_success_kpis - INFO - Franchise Success KPIs completed in 0.26 seconds

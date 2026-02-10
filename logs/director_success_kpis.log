@@ -22,3 +22,9 @@
 2026-01-29 08:59:30,503 - director_success_kpis - INFO - Computing total revenue per director
 2026-01-29 08:59:30,550 - director_success_kpis - INFO - Computing mean rating per director
 2026-01-29 08:59:30,601 - director_success_kpis - INFO - Director Success KPIs completed in 0.16 seconds
+2026-02-09 15:12:52,674 - director_success_kpis - INFO - Starting Director Success KPI computation
+2026-02-09 15:12:52,676 - director_success_kpis - INFO - Aggregating director-level metrics
+2026-02-09 15:12:52,744 - director_success_kpis - INFO - Computing total number of movies per director
+2026-02-09 15:12:52,783 - director_success_kpis - INFO - Computing total revenue per director
+2026-02-09 15:12:52,816 - director_success_kpis - INFO - Computing mean rating per director
+2026-02-09 15:12:52,854 - director_success_kpis - INFO - Director Success KPIs completed in 0.18 seconds

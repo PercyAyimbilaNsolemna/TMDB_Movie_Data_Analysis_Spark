@@ -9,3 +9,6 @@
 2026-01-29 08:59:26,392 - franchise_vs_standalone_kpis - INFO - Starting Franchise vs Standalone KPI computation
 2026-01-29 08:59:26,408 - franchise_vs_standalone_kpis - INFO - Movies labeled as Franchise or Standalone
 2026-01-29 08:59:26,490 - franchise_vs_standalone_kpis - INFO - Franchise vs Standalone KPIs completed in 0.10 seconds
+2026-02-09 15:12:44,073 - franchise_vs_standalone_kpis - INFO - Starting Franchise vs Standalone KPI computation
+2026-02-09 15:12:44,115 - franchise_vs_standalone_kpis - INFO - Movies labeled as Franchise or Standalone
+2026-02-09 15:12:44,273 - franchise_vs_standalone_kpis - INFO - Franchise vs Standalone KPIs completed in 0.20 seconds

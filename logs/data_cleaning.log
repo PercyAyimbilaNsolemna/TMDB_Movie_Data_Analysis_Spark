@@ -244,3 +244,17 @@
 2026-01-29 08:59:17,791 - preprocessing - INFO - Reordered and finalized columns.
 2026-01-29 08:59:20,671 - preprocessing - INFO - Cleaned data saved to /data/cleaned_movie_data
 2026-01-29 08:59:20,673 - preprocessing - INFO - ========== DATA PREPROCESSING COMPLETED ==========
+2026-02-09 15:12:16,225 - preprocessing - INFO - ========== STARTING DATA PREPROCESSING ==========
+2026-02-09 15:12:16,400 - preprocessing - INFO - Data loaded from /data/raw_data/movieData.json
+2026-02-09 15:12:16,865 - preprocessing - INFO - Initial row count: 18
+2026-02-09 15:12:16,905 - preprocessing - INFO - Dropped irrelevant columns: ['adult', 'backdrop_path', 'origin_country', 'original_title', 'imdb_id', 'video', 'homepage']
+2026-02-09 15:12:17,418 - preprocessing - INFO - Parsed array-based columns successfully.
+2026-02-09 15:12:17,790 - preprocessing - INFO - Extracted director, cast, crew_size, cast_size.
+2026-02-09 15:12:18,476 - preprocessing - INFO - Converted datatypes and scaled budget/revenue.
+2026-02-09 15:12:19,004 - preprocessing - INFO - Handled unrealistic values and placeholders.
+2026-02-09 15:12:20,961 - preprocessing - INFO - Row count after deduplication: 18
+2026-02-09 15:12:23,601 - preprocessing - INFO - Row count after non-null filtering: 18
+2026-02-09 15:12:26,590 - preprocessing - INFO - Row count after Released filter: 18
+2026-02-09 15:12:26,676 - preprocessing - INFO - Reordered and finalized columns.
+2026-02-09 15:12:35,145 - preprocessing - INFO - Cleaned data saved to /data/cleaned_movie_data
+2026-02-09 15:12:35,149 - preprocessing - INFO - ========== DATA PREPROCESSING COMPLETED ==========
