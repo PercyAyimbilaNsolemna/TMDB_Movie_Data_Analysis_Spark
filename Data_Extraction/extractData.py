@@ -1,11 +1,15 @@
-class ApiRequestError(Exception):
-    """Base class for API request errors."""
-
+import sys
 import pandas as pd
 import requests
 import json
 import os
 from typing import Optional
+from concurrent.futures import ThreadPoolExecutor, as_completed
+
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(project_root)
+
+from src.utils.logger import setup_logger
 
 
 class ApiRequestError(Exception):
@@ -13,109 +17,86 @@ class ApiRequestError(Exception):
     pass
 
 
-def extractDataFromAPIOld(session: Optional[requests.Session], 
-                       url: str, 
-                       API_KEY: str,
-                       movie_ids: list,
-                       output_path: str = "/data/raw_data/movieData.csv") -> None:
-    
-    """
+# -----------------------------
+# Logging setup
+# -----------------------------
+logger = setup_logger(
+    name="data_extraction",
+    log_file="/logs/data_extraction.log"
+)
 
-    Queries an API (Movie Dataset API), extracts the dataset and convert it to a pandas dataFrame
+logger.info("========== STARTING DATA EXTRACTION ==========")
 
-    Parameters
-    ----------
-    sesssion    :   Session Object
-                    Session object to handle retry logic
 
-    url :   str
-        The URL for the API
+# -----------------------------
+# Fetch movies
+# -----------------------------
+def fetch_movie(session, endpoint, headers, params, movie_id):
+    try:
+        response = session.get(
+            f"{endpoint}/{movie_id}",
+            headers=headers,
+            params=params,
+            timeout=10
+        )
+        if response.status_code != 200:
+            return None
+        return response.json()
+    except requests.exceptions.RequestException:
+        return None
 
-    API_KEY : str
-            The API KEY for authentication
 
-    movie_ids   :   list
-                List of IDs for movies to be extracted
+# -----------------------------
+# Extract movie data from the API
+# -----------------------------
+def extractDataFromAPI(
+    session: Optional[requests.Session],
+    url: str,
+    API_KEY: str,
+    movie_ids: list,
+    output_path: str = "../data/raw_data/movieData.json",
+    max_workers: int = 5
+):
+    if not url or not API_KEY:
+        raise ValueError("URL and API Key required")
 
-    maxPages    :   int
-                Sets the default to 500
-                The maximum number of pages to fetch
-
-    Returns:
-    -------
-    None
-
-    """
-
-    #  VALIDATION 
-    if url is None or API_KEY is None:
-        raise ValueError("URL and API Key are required.")
-
-    if not movie_ids:
-        raise ValueError("Movie ID list cannot be empty")
-
-    url = url.strip()
-    API_KEY = API_KEY.strip()
-
-    #  REQUEST SETTINGS 
     headers = {
         "Authorization": f"Bearer {API_KEY}",
         "Accept": "application/json"
     }
 
     params = {
-        "include_adult": True,
         "language": "en-US",
-        "append_to_response": "credits"  # includes cast + crew
+        "append_to_response": "credits"
     }
 
-    df = pd.DataFrame()
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
-    # FETCH MOVIE DATA 
-    for movie_id in movie_ids:
+    results = []
 
-        endpoint = f"{url}/{movie_id}"
+    logger.info("Starting API data extraction and writing to file")
 
-        try:
-            response = session.get(
-                url=endpoint,
-                headers=headers,
-                params=params,
-                timeout=10
-            )
-        except requests.exceptions.Timeout:
-            raise ApiRequestError("Request timed out.")
-        except requests.exceptions.ConnectionError:
-            raise ApiRequestError("Connection error.")
-        except requests.exceptions.RequestException as e:
-            raise ApiRequestError(f"Network error: {e}")
+    # -----------------------------
+    # Setups up multithreading and writes to file if any of the threads completes the API call
+    # -----------------------------
+    with open(output_path, "w", encoding="utf-8") as f:
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            futures = [
+                executor.submit(fetch_movie, session, url, headers, params, movie_id)
+                for movie_id in movie_ids
+            ]
 
-        if response.status_code == 404:
-            # Skip missing movie IDs
-            continue
+            for future in as_completed(futures):
+                result = future.result()
+                if result:
+                    f.write(json.dumps(result) + "\n")
 
-        # Safe JSON parse
-        try:
-            json_data = response.json()
-        except ValueError:
-            continue
+    logger.info("========== DATA EXTRACTION COMPLETED ==========")
 
-        movie_df = pd.json_normalize(json_data)
-        df = pd.concat([df, movie_df], ignore_index=True)
-
-    # SAVE TO CSV 
-
-    # Create directory if missing
-    output_dir = os.path.dirname(output_path)
-    if output_dir and not os.path.exists(output_dir):
-        os.makedirs(output_dir)
-
-    df.to_csv(output_path, index=False)
-
-    print(f"Movie data saved to: {output_path}")
+    print(f"Saved {len(results)} movies to {output_path}")
 
 
-def extractDataFromAPI(
+def extractDataFromAPIOld(
     session: Optional[requests.Session],
     url: str,
     API_KEY: str,
@@ -137,6 +118,7 @@ def extractDataFromAPI(
 
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
+    logger.info("Starting API data extraction and writing to file")
     with open(output_path, "w", encoding="utf-8") as f:
         for movie_id in movie_ids:
             endpoint = f"{url}/{movie_id}"
@@ -158,6 +140,7 @@ def extractDataFromAPI(
 
             except requests.exceptions.RequestException:
                 continue
+    logger.info("Completed API data extraction and writing to file")
 
     print(f"Raw TMDB JSON saved to {output_path}")
 
@@ -180,7 +163,7 @@ def main():
                     284054, 12445, 181808, 330457, 351286, 109445, 321612, 260513]
 
     data = extractDataFromAPI(session=create_retry(), url=url, API_KEY=API_KEY, movie_ids=movie_ids)
-    #print(data.head())
+    print(data.head())
 
 if __name__ == "__main__":
         main()
