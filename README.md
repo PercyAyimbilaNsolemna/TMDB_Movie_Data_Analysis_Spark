@@ -11,17 +11,17 @@
 
 ---
 
-### 📊 **Transforming Movie Data into Actionable Insights**
+###  **Transforming Movie Data into Actionable Insights**
 
 *An end-to-end big data analytics pipeline leveraging Apache Spark for scalable processing and advanced visual analytics*
 
-[🚀 Quick Start](#-how-to-run-the-project) • [📖 Documentation](#-data-processing-workflow) • [🎯 Features](#-objectives) • [📈 Results](#-key-takeaways)
+[ Quick Start](#-how-to-run-the-project) • [ Documentation](#-data-processing-workflow) • [ Features](#-objectives) • [ Results](#-key-takeaways)
 
 </div>
 
 ---
 
-## 🌟 **Project Highlights**
+##  **Project Highlights**
 
 <table>
 <tr>
@@ -55,7 +55,7 @@
 
 ---
 
-## 🎯 **Objectives**
+##  **Objectives**
 
 <div align="center">
 
@@ -69,13 +69,13 @@
 
 ---
 
-## 🛠️ **Technology Stack**
+##  **Technology Stack**
 
 <div align="center">
 
 **Data Processing Flow:**
 
-📄 **Raw Data** → ⚡ **Apache Spark** *(Ingestion)* → 🔍 **Spark SQL** *(Processing)* → 📊 **Pandas** *(Aggregation)* → 📈 **Matplotlib** *(Visualization)*
+ **Raw Data** →  **Apache Spark** *(Ingestion)* →  **Spark SQL** *(Processing)* →  **Pandas** *(Aggregation)* →  **Matplotlib** *(Visualization)*
 
 <details>
 <summary> <b>View Interactive Diagram</b></summary>
@@ -129,7 +129,7 @@ graph LR
 
 ---
 
-## 📂 **Project Architecture**
+##  **Project Architecture**
 
 ```
  TMDB_Movie_Data_Analysis_Spark/
@@ -170,7 +170,7 @@ graph LR
 
 ---
 
-## 🔄 **Data Processing Pipeline**
+##  **Data Processing Pipeline**
 
 <div align="center">
 
@@ -178,7 +178,7 @@ graph LR
 
 </div>
 
-### **1️⃣ Data Ingestion & Cleaning**
+### ** Data Ingestion & Cleaning**
 
 ```python
 ✓ Spark DataFrame API for efficient loading
@@ -188,7 +188,7 @@ graph LR
 ✓ Malformed record handling
 ```
 
-### **2️⃣ Feature Engineering**
+### ** Feature Engineering**
 
 <table>
 <tr>
@@ -212,7 +212,7 @@ graph LR
 </tr>
 </table>
 
-### **3️⃣ KPI Implementation & Ranking**
+### ** KPI Implementation & Ranking**
 
 <div align="center">
 
@@ -229,7 +229,7 @@ graph LR
 
 ---
 
-## 🔍 **Advanced Analytics Capabilities**
+##  **Advanced Analytics Capabilities**
 
 ### **Complex Multi-Dimensional Queries**
 
@@ -253,7 +253,7 @@ Cast: Uma Thurman
 </td>
 <td>
 
-**⚙️ Technical Approach**
+**Technical Approach**
 
 - Array explosion for nested fields
 - Multi-dimensional filtering
@@ -288,7 +288,7 @@ Cast: Uma Thurman
 
 ---
 
-## 🏆 **Entity Performance Rankings**
+##  **Entity Performance Rankings**
 
 <table>
 <tr>
@@ -321,7 +321,7 @@ Cast: Uma Thurman
 
 ---
 
-## 📊 **Visualization Gallery**
+##  **Visualization Gallery**
 
 <div align="center">
 
@@ -353,7 +353,7 @@ Cast: Uma Thurman
 
 ---
 
-## ⚙️ **Quick Start Guide**
+##  **Quick Start Guide**
 
 ### **Prerequisites**
 
@@ -394,7 +394,7 @@ All is set up to start running the notebook
 
 ---
 
-## 📈 **Key Research Findings**
+##  **Key Research Findings**
 
 <div align="center">
 
@@ -410,7 +410,7 @@ All is set up to start running the notebook
 
 ---
 
-## 🚀 **Future Roadmap**
+##  **Future Roadmap**
 
 <div align="center">
 
@@ -423,7 +423,7 @@ All is set up to start running the notebook
 └─  **Streaming Platform Analysis** →  *Comprehensive Coverage*
 
 <details>
-<summary>🗺️ <b>View Full Roadmap Diagram</b></summary>
+<summary> <b>View Full Roadmap Diagram</b></summary>
 
 ```mermaid
 graph TD
@@ -461,7 +461,7 @@ graph TD
 
 ---
 
-## 👨‍💻 **About the Author**
+##  **About the Author**
 
 <div align="center">
 
@@ -480,7 +480,7 @@ graph TD
 
 ---
 
-## 📜 **License & Usage**
+##  **License & Usage**
 
 <div align="center">
 
@@ -490,7 +490,7 @@ For commercial use or collaboration inquiries, please [contact the author](#-abo
 
 ---
 
-### ⭐ **If you found this project helpful, please consider starring the repository!**
+### **If you found this project helpful, please consider starring the repository!**
 
 [![Star](https://img.shields.io/github/stars/yourusername/TMDB_Movie_Data_Analysis_Spark?style=social)](https://github.com/yourusername/TMDB_Movie_Data_Analysis_Spark)
 
