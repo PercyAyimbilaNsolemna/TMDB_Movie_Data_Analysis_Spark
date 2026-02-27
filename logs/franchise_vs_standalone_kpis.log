@@ -12,3 +12,15 @@
 2026-02-09 15:12:44,073 - franchise_vs_standalone_kpis - INFO - Starting Franchise vs Standalone KPI computation
 2026-02-09 15:12:44,115 - franchise_vs_standalone_kpis - INFO - Movies labeled as Franchise or Standalone
 2026-02-09 15:12:44,273 - franchise_vs_standalone_kpis - INFO - Franchise vs Standalone KPIs completed in 0.20 seconds
+2026-02-27 13:13:29,405 - franchise_vs_standalone_kpis - INFO - Starting Franchise vs Standalone KPI computation
+2026-02-27 13:13:29,428 - franchise_vs_standalone_kpis - INFO - Movies labeled as Franchise or Standalone
+2026-02-27 13:13:29,553 - franchise_vs_standalone_kpis - INFO - Franchise vs Standalone KPIs completed in 0.15 seconds
+2026-02-27 13:15:46,772 - franchise_vs_standalone_kpis - INFO - Starting Franchise vs Standalone KPI computation
+2026-02-27 13:15:46,802 - franchise_vs_standalone_kpis - INFO - Movies labeled as Franchise or Standalone
+2026-02-27 13:15:46,877 - franchise_vs_standalone_kpis - INFO - Franchise vs Standalone KPIs completed in 0.11 seconds
+2026-02-27 13:19:43,026 - franchise_vs_standalone_kpis - INFO - Starting Franchise vs Standalone KPI computation
+2026-02-27 13:19:43,042 - franchise_vs_standalone_kpis - INFO - Movies labeled as Franchise or Standalone
+2026-02-27 13:19:43,119 - franchise_vs_standalone_kpis - INFO - Franchise vs Standalone KPIs completed in 0.09 seconds
+2026-02-27 13:27:01,184 - franchise_vs_standalone_kpis - INFO - Starting Franchise vs Standalone KPI computation
+2026-02-27 13:27:01,202 - franchise_vs_standalone_kpis - INFO - Movies labeled as Franchise or Standalone
+2026-02-27 13:27:01,322 - franchise_vs_standalone_kpis - INFO - Franchise vs Standalone KPIs completed in 0.14 seconds

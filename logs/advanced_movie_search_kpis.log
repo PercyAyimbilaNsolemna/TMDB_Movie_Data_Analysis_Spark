@@ -39,3 +39,19 @@
 2026-02-09 15:12:42,475 - advanced_movie_search_kpis - INFO - Search 1: Sci-Fi Action movies starring Bruce Willis (sorted by rating)
 2026-02-09 15:12:42,594 - advanced_movie_search_kpis - INFO - Search 2: Uma Thurman movies directed by Quentin Tarantino
 2026-02-09 15:12:42,674 - advanced_movie_search_kpis - INFO - Advanced Movie Search KPIs completed in 0.23 seconds
+2026-02-27 13:13:28,578 - advanced_movie_search_kpis - INFO - Starting Advanced Movie Search KPIs
+2026-02-27 13:13:28,580 - advanced_movie_search_kpis - INFO - Search 1: Sci-Fi Action movies starring Bruce Willis (sorted by rating)
+2026-02-27 13:13:28,628 - advanced_movie_search_kpis - INFO - Search 2: Uma Thurman movies directed by Quentin Tarantino
+2026-02-27 13:13:28,651 - advanced_movie_search_kpis - INFO - Advanced Movie Search KPIs completed in 0.07 seconds
+2026-02-27 13:15:45,793 - advanced_movie_search_kpis - INFO - Starting Advanced Movie Search KPIs
+2026-02-27 13:15:45,796 - advanced_movie_search_kpis - INFO - Search 1: Sci-Fi Action movies starring Bruce Willis (sorted by rating)
+2026-02-27 13:15:45,867 - advanced_movie_search_kpis - INFO - Search 2: Uma Thurman movies directed by Quentin Tarantino
+2026-02-27 13:15:45,901 - advanced_movie_search_kpis - INFO - Advanced Movie Search KPIs completed in 0.11 seconds
+2026-02-27 13:19:42,278 - advanced_movie_search_kpis - INFO - Starting Advanced Movie Search KPIs
+2026-02-27 13:19:42,280 - advanced_movie_search_kpis - INFO - Search 1: Sci-Fi Action movies starring Bruce Willis (sorted by rating)
+2026-02-27 13:19:42,312 - advanced_movie_search_kpis - INFO - Search 2: Uma Thurman movies directed by Quentin Tarantino
+2026-02-27 13:19:42,332 - advanced_movie_search_kpis - INFO - Advanced Movie Search KPIs completed in 0.05 seconds
+2026-02-27 13:27:00,494 - advanced_movie_search_kpis - INFO - Starting Advanced Movie Search KPIs
+2026-02-27 13:27:00,501 - advanced_movie_search_kpis - INFO - Search 1: Sci-Fi Action movies starring Bruce Willis (sorted by rating)
+2026-02-27 13:27:00,545 - advanced_movie_search_kpis - INFO - Search 2: Uma Thurman movies directed by Quentin Tarantino
+2026-02-27 13:27:00,570 - advanced_movie_search_kpis - INFO - Advanced Movie Search KPIs completed in 0.08 seconds
