@@ -1,73 +1,96 @@
-#Defines a function to access the files in the .env file
+"""
+Configuration module for TMDB Movie Data Analysis project.
+
+This module handles environment variable loading and API configuration,
+providing utilities to access credentials and API endpoints securely
+from .env files.
+
+Functions:
+    loadEnv: Retrieve environment variables from .env file
+    getURL: Get the base TMDB API endpoint URL
+    create_retry: Create a retry session with exponential backoff logic
+"""
+
+
 def loadEnv(fileName: str) -> str:
     """
-    Docstring for getAPIKey
+    Load environment variable from .env file.
 
-    Access the API KEY from the .env file
+    Retrieves configuration values (such as API keys) from the .env file
+    using python-dotenv. Provides a fallback message if the variable is not found.
 
-    Parameters:
-    ----------
-    fileName    :   str
-                The name of the file in .env to access
+    Args:
+        fileName (str): The name of the environment variable to retrieve.
 
     Returns:
-    -------
-    data    :   str
-            The data contained in the file provided in the .env file
+        str: The value of the environment variable, or a message indicating
+             the variable was not found.
     """
-    #imports os
     import os
-
-    #Imports load_dotenv from dotenv
     from dotenv import load_dotenv
 
+    # Load environment variables from .env file
     load_dotenv()
 
+    # Retrieve the requested environment variable
     data = os.getenv(fileName)
 
+    # Return data if found, otherwise return informative error message
     return data if data != None else f"{fileName} was not found in the .env file"
 
-#Defines a function that returns the API url
-def getURL()-> str:
+
+def getURL() -> str:
     """
-    https://api.themoviedb.org/3/movie/299534?language=en-US&append_to_response=credits&api_key={{api_key}}
-    
+    Get the base TMDB API endpoint URL.
+
+    Returns the root URL for the TMDB (The Movie Database) API v3.
+    Specific movie endpoints should be appended to this base URL.
+
+    Returns:
+        str: The base TMDB API endpoint URL for movie resources.
+
+    Example:
+        base_url = getURL()  # Returns "https://api.themoviedb.org/3/movie"
+        full_endpoint = f"{base_url}/299534"  # Specific movie endpoint
     """
     return "https://api.themoviedb.org/3/movie"
 
 
-#Defines a function that creates a session for the retry logic
+
 def create_retry(total: int = 3, 
                  backoff_factor: float = 0.3, 
                  status_forcelist: tuple = (429, 500, 502, 503, 504), 
                  alllowed_methods: tuple = ("GET", "POST")) -> object:
     """
+    Create a requests Session with automatic retry logic and exponential backoff.
 
-    Creates a logic to retry when quering an API
+    Implements resilient HTTP request handling by automatically retrying failed
+    requests with exponential backoff delays. Useful for handling rate limiting
+    (429), server errors (5xx), and transient failures.
 
+    Args:
+        total (int): Maximum number of retry attempts. Defaults to 3.
+        backoff_factor (float): Multiplier for exponential backoff delay calculation.
+                                Formula: {backoff_factor} * (2 ** (number_of_retries - 1)).
+                                Defaults to 0.3 seconds.
+        status_forcelist (tuple): HTTP status codes that trigger a retry.
+                                  Defaults to (429, 500, 502, 503, 504).
+        alllowed_methods (tuple): HTTP methods allowed to perform retries.
+                                  Defaults to ("GET", "POST").
 
-    Parameters:
-    -----------
-    total : int
-            The maximum retries
+    Returns:
+        requests.Session: A configured session object with retry logic mounted
+                         to http:// and https:// adapters.
 
-    backoff_factor  :   float
-                The base delay before another retry request is made
-
-    status_forcelist    :   tuple
-                A tuple of status codes to perform retries on
-
-    allowed_methods     :   tuple
-                    A tuple of HTTP allowed methods to be allowed to make the retry request
-
-    Return:
-        Retry session
-
+    Example:
+        session = create_retry(total=5, backoff_factor=0.5)
+        response = session.get("https://api.themoviedb.org/3/movie/299534")
     """
     import requests
     from requests.adapters import HTTPAdapter
     from urllib3.util.retry import Retry
 
+    # Configure retry strategy with specified parameters
     retries = Retry(
         total=total,
         backoff_factor=backoff_factor,
@@ -75,21 +98,29 @@ def create_retry(total: int = 3,
         allowed_methods=alllowed_methods
     )
 
+    # Create an HTTP adapter with the retry strategy
     adapter = HTTPAdapter(max_retries=retries)
 
-    #Creates a session
+    # Create and configure a session
     session = requests.Session()
 
+    # Mount the retry adapter to both HTTP and HTTPS connections
     session.mount("http://", adapter)
-
     session.mount("https://", adapter)
 
     return session
 
 
 def main():
-    #print(f"The API key is : \n{loadEnv(fileName="API_KEY")}")
-    ...
+    """
+    Main entry point for configuration module testing.
+
+    Can be used to verify that environment variables are properly loaded.
+    Currently disabled to prevent accidental exposure of API keys.
+    """
+    # Uncomment below to test environment variable loading during development:
+    # print(f"The API key is : \n{loadEnv(fileName='API_KEY')}")
+    pass
 
 
 if __name__ == "__main__":
