@@ -1,3 +1,14 @@
+"""
+Franchise vs Standalone movie comparison KPIs.
+
+This module analyzes the differences in performance metrics between movies that
+are part of a franchise and standalone films. Comparison includes financial
+performance, audience ratings, and popularity metrics.
+
+Functions:
+    franchise_vs_standalone_kpis: Compare key metrics between franchise and standalone films
+"""
+
 import time
 from pyspark.sql import DataFrame
 from pyspark.sql import functions as F

@@ -1,3 +1,14 @@
+"""
+Advanced movie search and filtering KPIs.
+
+This module implements specialized search queries for discovering movies based on
+specific actor, director, and genre combinations. Useful for content discovery,
+recommendation systems, and exploratory data analysis.
+
+Functions:
+    advanced_movie_search_kpis: Compute filtered result sets for movie searches
+"""
+
 import time
 from pyspark.sql import DataFrame
 from pyspark.sql import functions as F

@@ -1,3 +1,14 @@
+"""
+Franchise performance KPI computations.
+
+This module calculates key performance indicators for movie franchises based on the
+collection of films belonging to each franchise. Metrics include franchise size,
+total financial performance, average budgets/revenues, and audience ratings.
+
+Functions:
+    franchise_success_kpis: Compute success metrics aggregated by franchise
+"""
+
 import time
 from pyspark.sql import DataFrame
 from pyspark.sql import functions as F

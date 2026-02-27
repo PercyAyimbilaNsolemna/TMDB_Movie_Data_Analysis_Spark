@@ -1,9 +1,43 @@
+"""
+Spark schema definitions for raw TMDB API JSON data.
+
+This module defines the StructType schema for raw data fetched directly from
+The Movie Database API. The schema includes all nested structures returned by
+the TMDB API including credits (cast/crew), genres, production information,
+and other metadata.
+
+The schema is used for validation during Spark data loading to ensure type
+consistency and catch malformed records early in the pipeline.
+"""
+
 from pyspark.sql.types import (
     StructType, StructField, StringType, BooleanType,
     LongType, DoubleType, ArrayType, DateType
 )
 
+
 def raw_movie_schema() -> StructType:
+    """
+    Define the Spark schema for raw TMDB API movie data.
+
+    Returns a StructType schema that matches the structure of JSON data
+    returned by TMDB API /movie/{id} endpoint with append_to_response=credits.
+    This includes full nested structures for credits, genres, production info, etc.
+
+    Returns:
+        pyspark.sql.types.StructType: Complete schema for raw movie data including:
+            - Basic movie info: title, id, release_date, etc.
+            - Nested credits: cast and crew arrays with member details
+            - Financial data: budget, revenue, popularity
+            - Metadata: genres, production companies/countries, languages
+            - Ratings: vote_average, vote_count
+            - Media: poster_path, backdrop_path, collections
+
+    Note:
+        All fields allow null values (nullable=True) to accommodate API inconsistencies.
+        Some TMDB datasets have missing or incomplete information for certain fields.
+        This schema should match the raw JSON structure exactly before preprocessing.
+    """
     return StructType([
 
         StructField("adult", BooleanType(), True),

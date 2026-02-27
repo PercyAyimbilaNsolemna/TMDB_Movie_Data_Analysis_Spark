@@ -1,3 +1,14 @@
+"""
+Movie performance KPI computations.
+
+This module calculates key performance indicators for individual movies across
+multiple dimensions including financial performance (revenue, profit, ROI),
+audience reception (ratings, votes), and popularity metrics.
+
+Functions:
+    movie_performance_kpis: Compute success metrics for all movies
+"""
+
 import time
 from pyspark.sql import DataFrame
 from pyspark.sql import functions as F

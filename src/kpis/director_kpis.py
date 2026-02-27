@@ -1,3 +1,14 @@
+"""
+Director performance KPI computations.
+
+This module calculates key performance indicators for movie directors based on their
+filmography in the TMDB dataset. Metrics include total film count, revenue generation,
+and audience ratings to identify the most successful directors.
+
+Functions:
+    director_success_kpis: Compute success metrics aggregated by director
+"""
+
 import time
 from pyspark.sql import DataFrame
 from pyspark.sql import functions as F
