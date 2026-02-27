@@ -12,75 +12,130 @@ Functions:
 import time
 from pyspark.sql import DataFrame
 from pyspark.sql import functions as F
+from pyspark.sql.column import Column
 from src.utils.logger import setup_logger
 
 
-def advanced_movie_search_kpis(df: DataFrame) -> dict:
+def _validate_columns(df: DataFrame, columns: list[str]) -> None:
     """
-    Advanced filtering & search KPIs.
+    Ensure specified columns exist in the DataFrame.
+
+    Args:
+        df (DataFrame): Input Spark DataFrame.
+        columns (list[str]): List of column names that must be present.
+
+    Raises:
+        ValueError: If any column is missing from the DataFrame.
+    """
+    missing = [c for c in columns if c not in df.columns]
+    if missing:
+        raise ValueError(f"Missing required columns for filter: {missing}")
+
+
+def _lower_col(col_name: str) -> Column:
+    """
+    Return a null-safe lower-case expression for a column.
+
+    Uses :pyfunc:`coalesce` to convert nulls to empty strings before lowering,
+    avoiding repeated null checks in filter logic.
+    """
+    return F.lower(F.coalesce(F.col(col_name), F.lit("")))
+
+
+def filter_movies(
+    df: DataFrame,
+    genres: list[str] | None = None,
+    actors: list[str] | None = None,
+    director: str | None = None,
+    sort_by: str | None = None,
+    ascending: bool = True,
+    **extra_filters
+) -> DataFrame:
+    """
+    Apply a flexible set of filters to the movie DataFrame.
+
+    Supports filtering by multiple genres (AND semantics), multiple actors,
+    director name, and arbitrary additional column-based conditions. It also
+    handles dynamic sorting and null-safe case-insensitive matching.
+
+    The function validates required columns and builds a single conjunctive
+    condition that is applied lazily to the DataFrame. This centralizes
+    filtering logic and makes future extensions easy.
+
+    Args:
+        df (DataFrame): Input Spark DataFrame containing movie records.
+        genres (list[str] | None): List of genres that must all be present.
+        actors (list[str] | None): List of actor names to match in cast.
+        director (str | None): Director name to match.
+        sort_by (str | None): Column name to sort by after filtering.
+        ascending (bool): Sort order; ``True`` for ascending, ``False`` for desc.
+        **extra_filters: Additional keyword filters mapping column to a value
+                         or callable returning a Column expression. Enables
+                         extensibility (e.g., rating thresholds, date ranges).
 
     Returns:
-        dict[str, DataFrame]
+        DataFrame: Filtered (and possibly ordered) DataFrame.
     """
+    # collect required columns based on provided arguments
+    required_cols: list[str] = []
+    if genres:
+        required_cols.append("genres")
+    if actors:
+        required_cols.append("cast")
+    if director:
+        required_cols.append("director")
+    if sort_by:
+        required_cols.append(sort_by)
+    required_cols.extend(extra_filters.keys())
 
-    logger = setup_logger(
-        name = "advanced_movie_search_kpis",
-        log_file = "/logs/advanced_movie_search_kpis.log"
-        )
-    start_time = time.time()
+    if required_cols:
+        _validate_columns(df, required_cols)
 
-    logger.info("Starting Advanced Movie Search KPIs")
+    # build conditions dynamically
+    conditions: list[Column] = []
 
-    results = {}
+    if genres:
+        # require that each requested genre appears in the genres column
+        genre_col = _lower_col("genres")
+        cond = None
+        for g in genres:
+            single = genre_col.contains(g.lower())
+            cond = single if cond is None else cond & single
+        conditions.append(cond)
 
-    # ---------------------------------------------------
-    # Search 1:
-    # Best-rated Science Fiction Action movies
-    # starring Bruce Willis
-    # ---------------------------------------------------
-    logger.info(
-        "Search 1: Sci-Fi Action movies starring Bruce Willis (sorted by rating)"
-    )
+    if actors:
+        cast_col = _lower_col("cast")
+        cond = None
+        for a in actors:
+            single = cast_col.contains(a.lower())
+            cond = single if cond is None else cond & single
+        conditions.append(cond)
 
-    search_1 = (
-        df
-        .filter(
-            F.lower(F.col("genres")).contains("science fiction") &
-            F.lower(F.col("genres")).contains("action") &
-            F.lower(F.col("cast")).contains("bruce willis")
-        )
-        .orderBy(F.col("vote_average").desc())
-    )
+    if director:
+        dir_col = _lower_col("director")
+        conditions.append(dir_col.contains(director.lower()))
 
-    results["bruce_willis_scifi_action"] = search_1
+    # additional user-provided filters
+    for col, val in extra_filters.items():
+        if callable(val):
+            conditions.append(val(F.col(col)))
+        else:
+            # assume simple equality for atomic values
+            conditions.append(F.col(col) == val)
 
-    # ---------------------------------------------------
-    # Search 2:
-    # Movies starring Uma Thurman
-    # directed by Quentin Tarantino
-    # sorted by runtime (shortest → longest)
-    # ---------------------------------------------------
-    logger.info(
-        "Search 2: Uma Thurman movies directed by Quentin Tarantino"
-    )
+    # combine all conditions into one
+    if conditions:
+        final_cond = conditions[0]
+        for other in conditions[1:]:
+            final_cond = final_cond & other
+        filtered = df.filter(final_cond)
+    else:
+        filtered = df
 
-    search_2 = (
-        df
-        .filter(
-            F.lower(F.col("cast")).contains("uma thurman") &
-            F.lower(F.col("director")).contains("quentin tarantino")
-        )
-        .orderBy(F.col("runtime").asc())
-    )
+    # apply sorting if requested
+    if sort_by:
+        order_expr = F.col(sort_by).asc() if ascending else F.col(sort_by).desc()
+        filtered = filtered.orderBy(order_expr)
 
-    results["uma_thurman_tarantino"] = search_2
+    return filtered
 
-    # ---------------------------------------------------
-    # Timing
-    # ---------------------------------------------------
-    duration = time.time() - start_time
-    logger.info(
-        f"Advanced Movie Search KPIs completed in {duration:.2f} seconds"
-    )
-
-    return results
