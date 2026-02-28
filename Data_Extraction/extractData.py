@@ -48,8 +48,6 @@ logger = setup_logger(
     log_file="/logs/data_extraction.log"
 )
 
-logger.info("========== STARTING DATA EXTRACTION ==========")
-
 
 def fetch_movie(session, endpoint, headers, params, movie_id):
     """
@@ -130,6 +128,9 @@ def extractDataFromAPI(
         - HTTP 429 (rate limit) responses trigger automatic retry via session config
         - Output directory is created if it does not exist
     """
+
+    logger.info("========== STARTING DATA EXTRACTION ==========")
+    
     # Validate required parameters
     if not url or not API_KEY:
         raise ValueError("URL and API Key required")
