@@ -47,7 +47,7 @@ def compute_financial_metrics(df: DataFrame) -> DataFrame:
     ------
     ValueError
         If the input dataframe's schema does not contain both
-        ``revenue_musd`` and ``budget_musd``.  The error message lists the
+        ``revenue_musd``,  ``budget_musd`` and ``belongs_tocollection``.  The error message lists the
         missing columns to help diagnose upstream issues.
     """
 
@@ -57,6 +57,10 @@ def compute_financial_metrics(df: DataFrame) -> DataFrame:
         raise ValueError(
             f"Cannot compute financial metrics; missing columns: {missing}"
         )
+
+    #Checks if belongs_to_collection is in the columns
+    if "belongs_to_collection" not in df.columns:
+        raise ValueError(f"DataFrame missing belongs to collection column needed for grouping")
 
     # profit: only when both fields are present and non-null
     profit_expr = when(
@@ -70,4 +74,10 @@ def compute_financial_metrics(df: DataFrame) -> DataFrame:
         spark_round(col("revenue_musd") / col("budget_musd"), 2),
     )
 
-    return df.withColumn("profit", profit_expr).withColumn("roi", roi_expr)
+
+    return df.withColumn("profit", profit_expr).withColumn("roi", roi_expr).withColumn(
+        "movie_type",
+        when(col("belongs_to_collection").isNotNull(), "Franchise").otherwise(
+            "Standalone"
+        ),
+    )
