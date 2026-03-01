@@ -1,0 +1,104 @@
+2026-03-01 16:42:47,060 - aggregate_by_dimension - INFO - Starting aggregation dimension=movie_type metrics=[{'column': '*', 'agg': 'count', 'alias': 'total_movies'}, {'column': 'budget_musd', 'agg': 'sum', 'alias': 'total_budget_musd', 'round': 2}, {'column': 'budget_musd', 'agg': 'mean', 'alias': 'mean_budget_musd', 'round': 2}, {'column': 'revenue_musd', 'agg': 'sum', 'alias': 'total_revenue_musd', 'round': 2}, {'column': 'revenue_musd', 'agg': 'mean', 'alias': 'mean_revenue_musd', 'round': 2}, {'column': 'vote_average', 'agg': 'mean', 'alias': 'mean_rating', 'round': 2}] min_count=None order_by=total_revenue_musd ascending=False
+2026-03-01 16:44:13,908 - aggregate_by_dimension - INFO - Starting aggregation dimension=movie_type metrics=[{'column': 'budget_musd', 'agg': 'sum', 'alias': 'total_budget_musd', 'round': 2}, {'column': 'budget_musd', 'agg': 'mean', 'alias': 'mean_budget_musd', 'round': 2}, {'column': 'revenue_musd', 'agg': 'sum', 'alias': 'total_revenue_musd', 'round': 2}, {'column': 'revenue_musd', 'agg': 'mean', 'alias': 'mean_revenue_musd', 'round': 2}, {'column': 'vote_average', 'agg': 'mean', 'alias': 'mean_rating', 'round': 2}] min_count=None order_by=total_revenue_musd ascending=False
+2026-03-01 16:44:14,039 - aggregate_by_dimension - INFO - Sorted by total_revenue_musd ascending=False
+2026-03-01 16:44:14,045 - aggregate_by_dimension - INFO - Aggregation completed in 0.14 seconds
+2026-03-01 16:50:29,981 - aggregate_by_dimension - INFO - Starting aggregation dimension=movie_type metrics=[{'column': 'movie_type', 'agg': 'count', 'alias': 'total_movies'}, {'column': 'revenue_musd', 'agg': 'mean', 'alias': 'mean_revenue', 'round': 2}, {'column': 'roi', 'agg': 'median', 'alias': 'median_roi', 'round': 2}, {'column': 'budget_musd', 'agg': 'mean', 'alias': 'mean_budget', 'round': 2}, {'column': 'popularity', 'agg': 'mean', 'alias': 'mean_popularity', 'round': 2}, {'column': 'vote_average', 'agg': 'mean', 'alias': 'mean_rating', 'round': 2}] min_count=None order_by=total_revenue_musd ascending=False
+2026-03-01 16:51:16,421 - aggregate_by_dimension - INFO - Starting aggregation dimension=movie_type metrics=[{'column': 'movie_type', 'agg': 'count', 'alias': 'total_movies'}, {'column': 'revenue_musd', 'agg': 'mean', 'alias': 'mean_revenue', 'round': 2}, {'column': 'roi', 'agg': 'median', 'alias': 'median_roi', 'round': 2}, {'column': 'budget_musd', 'agg': 'mean', 'alias': 'mean_budget', 'round': 2}, {'column': 'popularity', 'agg': 'mean', 'alias': 'mean_popularity', 'round': 2}, {'column': 'vote_average', 'agg': 'mean', 'alias': 'mean_rating', 'round': 2}] min_count=None order_by=None ascending=False
+2026-03-01 16:51:16,498 - aggregate_by_dimension - INFO - Aggregation completed in 0.08 seconds
+2026-03-01 19:45:20,243 - aggregate_by_dimension - INFO - Starting aggregation dimension=belongs_to_collection metrics=[{'column': '*', 'agg': 'count', 'alias': 'total_movies'}] min_count=None order_by=total_movies ascending=False
+2026-03-01 19:45:39,295 - aggregate_by_dimension - INFO - Starting aggregation dimension=belongs_to_collection metrics=[{'column': 'belongs_to_collection', 'agg': 'count', 'alias': 'total_movies'}] min_count=None order_by=total_movies ascending=False
+2026-03-01 19:45:39,353 - aggregate_by_dimension - INFO - Sorted by total_movies ascending=False
+2026-03-01 19:45:39,354 - aggregate_by_dimension - INFO - Aggregation completed in 0.06 seconds
+2026-03-01 19:46:09,592 - aggregate_by_dimension - INFO - Starting aggregation dimension=belongs_to_collection metrics=[{'column': 'belongs_to_collection', 'agg': 'count', 'alias': 'total_movies'}] min_count=None order_by=total_movies ascending=False
+2026-03-01 19:46:09,635 - aggregate_by_dimension - INFO - Sorted by total_movies ascending=False
+2026-03-01 19:46:09,637 - aggregate_by_dimension - INFO - Aggregation completed in 0.05 seconds
+2026-03-01 19:50:53,513 - aggregate_by_dimension - INFO - Starting aggregation dimension=belongs_to_collection metrics=[{'column': 'revenue_musd', 'agg': 'sum', 'alias': 'total_revenue_musd', 'round': 2}] min_count=None order_by=total_revenue_musd ascending=False
+2026-03-01 19:50:53,557 - aggregate_by_dimension - INFO - Sorted by total_revenue_musd ascending=False
+2026-03-01 19:50:53,559 - aggregate_by_dimension - INFO - Aggregation completed in 0.05 seconds
+2026-03-01 19:54:38,043 - aggregate_by_dimension - INFO - Starting aggregation dimension=belongs_to_collection metrics=[{'column': 'revenue_musd', 'agg': 'sum', 'alias': 'total_revenue_musd', 'round': 2}] min_count=None order_by=total_revenue_musd ascending=False
+2026-03-01 19:54:38,080 - aggregate_by_dimension - INFO - Sorted by total_revenue_musd ascending=False
+2026-03-01 19:54:38,082 - aggregate_by_dimension - INFO - Aggregation completed in 0.04 seconds
+2026-03-01 19:54:48,178 - aggregate_by_dimension - INFO - Starting aggregation dimension=belongs_to_collection metrics=[{'column': 'revenue_musd', 'agg': 'mean', 'alias': 'mean_revenue_musd', 'round': 2}] min_count=None order_by=mean_revenue_musd ascending=False
+2026-03-01 19:54:48,237 - aggregate_by_dimension - INFO - Sorted by mean_revenue_musd ascending=False
+2026-03-01 19:54:48,239 - aggregate_by_dimension - INFO - Aggregation completed in 0.06 seconds
+2026-03-01 19:56:12,704 - aggregate_by_dimension - INFO - Starting aggregation dimension=belongs_to_collection metrics=[{'column': 'budget_musd', 'agg': 'sum', 'alias': 'total_budget_musd', 'round': 2}] min_count=None order_by=total_budget_musd ascending=False
+2026-03-01 19:56:12,773 - aggregate_by_dimension - INFO - Sorted by total_budget_musd ascending=False
+2026-03-01 19:56:12,777 - aggregate_by_dimension - INFO - Aggregation completed in 0.07 seconds
+2026-03-01 19:58:03,222 - aggregate_by_dimension - INFO - Starting aggregation dimension=belongs_to_collection metrics=[{'column': 'budget_musd', 'agg': 'mean', 'alias': 'mean_budget_musd', 'round': 2}] min_count=None order_by=mean_budget_musd ascending=False
+2026-03-01 19:58:03,270 - aggregate_by_dimension - INFO - Sorted by mean_budget_musd ascending=False
+2026-03-01 19:58:03,276 - aggregate_by_dimension - INFO - Aggregation completed in 0.05 seconds
+2026-03-01 20:01:33,951 - aggregate_by_dimension - INFO - Starting aggregation dimension=belongs_to_collection metrics=[{'column': 'vote_average', 'agg': 'mean', 'alias': 'mean_rating', 'round': 2}] min_count=None order_by=mean_rating ascending=False
+2026-03-01 20:01:34,058 - aggregate_by_dimension - INFO - Sorted by mean_rating ascending=False
+2026-03-01 20:01:34,062 - aggregate_by_dimension - INFO - Aggregation completed in 0.11 seconds
+2026-03-01 20:05:35,706 - aggregate_by_dimension - INFO - Starting aggregation dimension=directors metrics=[{'column': 'directors', 'agg': 'sum', 'alias': 'total_movies'}] min_count=None order_by=total_revenue_musd ascending=False
+2026-03-01 20:05:49,565 - aggregate_by_dimension - INFO - Starting aggregation dimension=director metrics=[{'column': 'director', 'agg': 'sum', 'alias': 'total_movies'}] min_count=None order_by=total_revenue_musd ascending=False
+2026-03-01 20:06:05,159 - aggregate_by_dimension - INFO - Starting aggregation dimension=director metrics=[{'column': 'director', 'agg': 'sum', 'alias': 'total_movies'}] min_count=None order_by=total_movies ascending=False
+2026-03-01 20:06:05,189 - aggregate_by_dimension - INFO - Sorted by total_movies ascending=False
+2026-03-01 20:06:05,191 - aggregate_by_dimension - INFO - Aggregation completed in 0.03 seconds
+2026-03-01 20:08:18,180 - aggregate_by_dimension - INFO - Starting aggregation dimension=director metrics=[{'column': 'director', 'agg': 'count', 'alias': 'total_movies'}] min_count=None order_by=total_movies ascending=False
+2026-03-01 20:08:18,218 - aggregate_by_dimension - INFO - Sorted by total_movies ascending=False
+2026-03-01 20:08:18,220 - aggregate_by_dimension - INFO - Aggregation completed in 0.04 seconds
+2026-03-01 20:11:27,534 - aggregate_by_dimension - INFO - Starting aggregation dimension=director metrics=[{'column': 'revenue_musd', 'agg': 'sum', 'alias': 'total_revenue_musd', 'round': 2}] min_count=None order_by=total_revenue_musd ascending=False
+2026-03-01 20:11:27,614 - aggregate_by_dimension - INFO - Sorted by total_revenue_musd ascending=False
+2026-03-01 20:11:27,616 - aggregate_by_dimension - INFO - Aggregation completed in 0.08 seconds
+2026-03-01 20:14:29,253 - aggregate_by_dimension - INFO - Starting aggregation dimension=director metrics=[{'column': 'vote_average', 'agg': 'mean', 'alias': 'mean_rating', 'round': 2}] min_count=None order_by=mean_rating ascending=False
+2026-03-01 20:14:29,335 - aggregate_by_dimension - INFO - Sorted by mean_rating ascending=False
+2026-03-01 20:14:29,336 - aggregate_by_dimension - INFO - Aggregation completed in 0.08 seconds
+2026-03-01 21:39:36,661 - aggregate_by_dimension - INFO - Starting aggregation dimension=movie_type metrics=[{'column': 'movie_type', 'agg': 'count', 'alias': 'total_movies'}, {'column': 'revenue_musd', 'agg': 'mean', 'alias': 'mean_revenue', 'round': 2}, {'column': 'roi', 'agg': 'median', 'alias': 'median_roi', 'round': 2}, {'column': 'budget_musd', 'agg': 'mean', 'alias': 'mean_budget', 'round': 2}, {'column': 'popularity', 'agg': 'mean', 'alias': 'mean_popularity', 'round': 2}, {'column': 'vote_average', 'agg': 'mean', 'alias': 'mean_rating', 'round': 2}] min_count=None order_by=None ascending=False
+2026-03-01 21:39:36,763 - aggregate_by_dimension - INFO - Aggregation completed in 0.10 seconds
+2026-03-01 21:39:37,260 - aggregate_by_dimension - INFO - Starting aggregation dimension=belongs_to_collection metrics=[{'column': 'belongs_to_collection', 'agg': 'count', 'alias': 'total_movies'}] min_count=None order_by=total_movies ascending=False
+2026-03-01 21:39:37,298 - aggregate_by_dimension - INFO - Sorted by total_movies ascending=False
+2026-03-01 21:39:37,300 - aggregate_by_dimension - INFO - Aggregation completed in 0.04 seconds
+2026-03-01 21:39:37,845 - aggregate_by_dimension - INFO - Starting aggregation dimension=belongs_to_collection metrics=[{'column': 'revenue_musd', 'agg': 'sum', 'alias': 'total_revenue_musd', 'round': 2}] min_count=None order_by=total_revenue_musd ascending=False
+2026-03-01 21:39:37,906 - aggregate_by_dimension - INFO - Sorted by total_revenue_musd ascending=False
+2026-03-01 21:39:37,907 - aggregate_by_dimension - INFO - Aggregation completed in 0.06 seconds
+2026-03-01 21:39:38,383 - aggregate_by_dimension - INFO - Starting aggregation dimension=belongs_to_collection metrics=[{'column': 'revenue_musd', 'agg': 'mean', 'alias': 'mean_revenue_musd', 'round': 2}] min_count=None order_by=mean_revenue_musd ascending=False
+2026-03-01 21:39:38,504 - aggregate_by_dimension - INFO - Sorted by mean_revenue_musd ascending=False
+2026-03-01 21:39:38,506 - aggregate_by_dimension - INFO - Aggregation completed in 0.12 seconds
+2026-03-01 21:39:38,907 - aggregate_by_dimension - INFO - Starting aggregation dimension=belongs_to_collection metrics=[{'column': 'budget_musd', 'agg': 'sum', 'alias': 'total_budget_musd', 'round': 2}] min_count=None order_by=total_budget_musd ascending=False
+2026-03-01 21:39:38,972 - aggregate_by_dimension - INFO - Sorted by total_budget_musd ascending=False
+2026-03-01 21:39:38,973 - aggregate_by_dimension - INFO - Aggregation completed in 0.07 seconds
+2026-03-01 21:39:39,249 - aggregate_by_dimension - INFO - Starting aggregation dimension=belongs_to_collection metrics=[{'column': 'budget_musd', 'agg': 'mean', 'alias': 'mean_budget_musd', 'round': 2}] min_count=None order_by=mean_budget_musd ascending=False
+2026-03-01 21:39:39,295 - aggregate_by_dimension - INFO - Sorted by mean_budget_musd ascending=False
+2026-03-01 21:39:39,297 - aggregate_by_dimension - INFO - Aggregation completed in 0.05 seconds
+2026-03-01 21:39:39,654 - aggregate_by_dimension - INFO - Starting aggregation dimension=belongs_to_collection metrics=[{'column': 'vote_average', 'agg': 'mean', 'alias': 'mean_rating', 'round': 2}] min_count=None order_by=mean_rating ascending=False
+2026-03-01 21:39:39,700 - aggregate_by_dimension - INFO - Sorted by mean_rating ascending=False
+2026-03-01 21:39:39,702 - aggregate_by_dimension - INFO - Aggregation completed in 0.05 seconds
+2026-03-01 21:39:40,047 - aggregate_by_dimension - INFO - Starting aggregation dimension=director metrics=[{'column': 'director', 'agg': 'count', 'alias': 'total_movies'}] min_count=None order_by=total_movies ascending=False
+2026-03-01 21:39:40,106 - aggregate_by_dimension - INFO - Sorted by total_movies ascending=False
+2026-03-01 21:39:40,108 - aggregate_by_dimension - INFO - Aggregation completed in 0.06 seconds
+2026-03-01 21:39:40,440 - aggregate_by_dimension - INFO - Starting aggregation dimension=director metrics=[{'column': 'revenue_musd', 'agg': 'sum', 'alias': 'total_revenue_musd', 'round': 2}] min_count=None order_by=total_revenue_musd ascending=False
+2026-03-01 21:39:40,490 - aggregate_by_dimension - INFO - Sorted by total_revenue_musd ascending=False
+2026-03-01 21:39:40,492 - aggregate_by_dimension - INFO - Aggregation completed in 0.05 seconds
+2026-03-01 21:39:41,021 - aggregate_by_dimension - INFO - Starting aggregation dimension=director metrics=[{'column': 'vote_average', 'agg': 'mean', 'alias': 'mean_rating', 'round': 2}] min_count=None order_by=mean_rating ascending=False
+2026-03-01 21:39:41,084 - aggregate_by_dimension - INFO - Sorted by mean_rating ascending=False
+2026-03-01 21:39:41,085 - aggregate_by_dimension - INFO - Aggregation completed in 0.06 seconds
+2026-03-01 21:45:46,095 - aggregate_by_dimension - INFO - Starting aggregation dimension=movie_type metrics=[{'column': 'movie_type', 'agg': 'count', 'alias': 'total_movies'}, {'column': 'revenue_musd', 'agg': 'mean', 'alias': 'mean_revenue', 'round': 2}, {'column': 'roi', 'agg': 'median', 'alias': 'median_roi', 'round': 2}, {'column': 'budget_musd', 'agg': 'mean', 'alias': 'mean_budget', 'round': 2}, {'column': 'popularity', 'agg': 'mean', 'alias': 'mean_popularity', 'round': 2}, {'column': 'vote_average', 'agg': 'mean', 'alias': 'mean_rating', 'round': 2}] min_count=None order_by=None ascending=False
+2026-03-01 21:45:46,193 - aggregate_by_dimension - INFO - Aggregation completed in 0.10 seconds
+2026-03-01 21:45:46,695 - aggregate_by_dimension - INFO - Starting aggregation dimension=belongs_to_collection metrics=[{'column': 'belongs_to_collection', 'agg': 'count', 'alias': 'total_movies'}] min_count=None order_by=total_movies ascending=False
+2026-03-01 21:45:46,753 - aggregate_by_dimension - INFO - Sorted by total_movies ascending=False
+2026-03-01 21:45:46,754 - aggregate_by_dimension - INFO - Aggregation completed in 0.06 seconds
+2026-03-01 21:45:47,473 - aggregate_by_dimension - INFO - Starting aggregation dimension=belongs_to_collection metrics=[{'column': 'revenue_musd', 'agg': 'sum', 'alias': 'total_revenue_musd', 'round': 2}] min_count=None order_by=total_revenue_musd ascending=False
+2026-03-01 21:45:47,533 - aggregate_by_dimension - INFO - Sorted by total_revenue_musd ascending=False
+2026-03-01 21:45:47,536 - aggregate_by_dimension - INFO - Aggregation completed in 0.06 seconds
+2026-03-01 21:45:47,959 - aggregate_by_dimension - INFO - Starting aggregation dimension=belongs_to_collection metrics=[{'column': 'revenue_musd', 'agg': 'mean', 'alias': 'mean_revenue_musd', 'round': 2}] min_count=None order_by=mean_revenue_musd ascending=False
+2026-03-01 21:45:48,042 - aggregate_by_dimension - INFO - Sorted by mean_revenue_musd ascending=False
+2026-03-01 21:45:48,043 - aggregate_by_dimension - INFO - Aggregation completed in 0.08 seconds
+2026-03-01 21:45:48,611 - aggregate_by_dimension - INFO - Starting aggregation dimension=belongs_to_collection metrics=[{'column': 'budget_musd', 'agg': 'sum', 'alias': 'total_budget_musd', 'round': 2}] min_count=None order_by=total_budget_musd ascending=False
+2026-03-01 21:45:48,672 - aggregate_by_dimension - INFO - Sorted by total_budget_musd ascending=False
+2026-03-01 21:45:48,673 - aggregate_by_dimension - INFO - Aggregation completed in 0.06 seconds
+2026-03-01 21:45:49,080 - aggregate_by_dimension - INFO - Starting aggregation dimension=belongs_to_collection metrics=[{'column': 'budget_musd', 'agg': 'mean', 'alias': 'mean_budget_musd', 'round': 2}] min_count=None order_by=mean_budget_musd ascending=False
+2026-03-01 21:45:49,146 - aggregate_by_dimension - INFO - Sorted by mean_budget_musd ascending=False
+2026-03-01 21:45:49,148 - aggregate_by_dimension - INFO - Aggregation completed in 0.07 seconds
+2026-03-01 21:45:49,713 - aggregate_by_dimension - INFO - Starting aggregation dimension=belongs_to_collection metrics=[{'column': 'vote_average', 'agg': 'mean', 'alias': 'mean_rating', 'round': 2}] min_count=None order_by=mean_rating ascending=False
+2026-03-01 21:45:49,780 - aggregate_by_dimension - INFO - Sorted by mean_rating ascending=False
+2026-03-01 21:45:49,783 - aggregate_by_dimension - INFO - Aggregation completed in 0.07 seconds
+2026-03-01 21:45:50,107 - aggregate_by_dimension - INFO - Starting aggregation dimension=director metrics=[{'column': 'director', 'agg': 'count', 'alias': 'total_movies'}] min_count=None order_by=total_movies ascending=False
+2026-03-01 21:45:50,250 - aggregate_by_dimension - INFO - Sorted by total_movies ascending=False
+2026-03-01 21:45:50,255 - aggregate_by_dimension - INFO - Aggregation completed in 0.15 seconds
+2026-03-01 21:45:50,829 - aggregate_by_dimension - INFO - Starting aggregation dimension=director metrics=[{'column': 'revenue_musd', 'agg': 'sum', 'alias': 'total_revenue_musd', 'round': 2}] min_count=None order_by=total_revenue_musd ascending=False
+2026-03-01 21:45:50,913 - aggregate_by_dimension - INFO - Sorted by total_revenue_musd ascending=False
+2026-03-01 21:45:50,917 - aggregate_by_dimension - INFO - Aggregation completed in 0.09 seconds
+2026-03-01 21:45:51,364 - aggregate_by_dimension - INFO - Starting aggregation dimension=director metrics=[{'column': 'vote_average', 'agg': 'mean', 'alias': 'mean_rating', 'round': 2}] min_count=None order_by=mean_rating ascending=False
+2026-03-01 21:45:51,461 - aggregate_by_dimension - INFO - Sorted by mean_rating ascending=False
+2026-03-01 21:45:51,463 - aggregate_by_dimension - INFO - Aggregation completed in 0.10 seconds

@@ -1,0 +1,93 @@
+2026-03-01 21:19:41,000 - kpi_utils - INFO - Starting rank_by_metric metric=revenue_musd ascending=False filter=False top_n=None
+2026-03-01 21:19:41,054 - kpi_utils - INFO - Sorted by revenue_musd descending
+2026-03-01 21:19:41,056 - kpi_utils - INFO - rank_by_metric completed in 0.06 seconds
+2026-03-01 21:21:23,095 - kpi_utils - INFO - Starting rank_by_metric metric=budget_musd ascending=False filter=False top_n=None
+2026-03-01 21:21:23,119 - kpi_utils - INFO - Sorted by budget_musd descending
+2026-03-01 21:21:23,120 - kpi_utils - INFO - rank_by_metric completed in 0.02 seconds
+2026-03-01 21:24:01,104 - kpi_utils - INFO - Starting rank_by_metric metric=profit ascending=False filter=False top_n=None
+2026-03-01 21:24:01,122 - kpi_utils - INFO - Sorted by profit descending
+2026-03-01 21:24:01,123 - kpi_utils - INFO - rank_by_metric completed in 0.02 seconds
+2026-03-01 21:26:10,969 - kpi_utils - INFO - Starting rank_by_metric metric=profit ascending=True filter=False top_n=None
+2026-03-01 21:26:10,983 - kpi_utils - INFO - Sorted by profit ascending
+2026-03-01 21:26:10,984 - kpi_utils - INFO - rank_by_metric completed in 0.02 seconds
+2026-03-01 21:27:40,216 - kpi_utils - INFO - Starting rank_by_metric metric=roi ascending=False filter=False top_n=None
+2026-03-01 21:27:40,227 - kpi_utils - INFO - Sorted by roi descending
+2026-03-01 21:27:40,228 - kpi_utils - INFO - rank_by_metric completed in 0.01 seconds
+2026-03-01 21:29:12,820 - kpi_utils - INFO - Starting rank_by_metric metric=roi ascending=True filter=False top_n=None
+2026-03-01 21:29:12,833 - kpi_utils - INFO - Sorted by roi ascending
+2026-03-01 21:29:12,835 - kpi_utils - INFO - rank_by_metric completed in 0.01 seconds
+2026-03-01 21:30:00,547 - kpi_utils - INFO - Starting rank_by_metric metric=roi ascending=True filter=False top_n=None
+2026-03-01 21:30:00,557 - kpi_utils - INFO - Sorted by roi ascending
+2026-03-01 21:30:00,558 - kpi_utils - INFO - rank_by_metric completed in 0.01 seconds
+2026-03-01 21:30:55,261 - kpi_utils - INFO - Starting rank_by_metric metric=vote_count ascending=False filter=False top_n=None
+2026-03-01 21:30:55,277 - kpi_utils - INFO - Sorted by vote_count descending
+2026-03-01 21:30:55,279 - kpi_utils - INFO - rank_by_metric completed in 0.02 seconds
+2026-03-01 21:33:08,481 - kpi_utils - INFO - Starting rank_by_metric metric=vote_average ascending=False filter=False top_n=None
+2026-03-01 21:33:08,498 - kpi_utils - INFO - Sorted by vote_average descending
+2026-03-01 21:33:08,499 - kpi_utils - INFO - rank_by_metric completed in 0.02 seconds
+2026-03-01 21:35:23,938 - kpi_utils - INFO - Starting rank_by_metric metric=vote_average ascending=True filter=False top_n=None
+2026-03-01 21:35:23,965 - kpi_utils - INFO - Sorted by vote_average ascending
+2026-03-01 21:35:23,969 - kpi_utils - INFO - rank_by_metric completed in 0.03 seconds
+2026-03-01 21:36:52,126 - kpi_utils - INFO - Starting rank_by_metric metric=popularity ascending=False filter=False top_n=None
+2026-03-01 21:36:52,142 - kpi_utils - INFO - Sorted by popularity descending
+2026-03-01 21:36:52,143 - kpi_utils - INFO - rank_by_metric completed in 0.02 seconds
+2026-03-01 21:39:32,793 - kpi_utils - INFO - Starting rank_by_metric metric=revenue_musd ascending=False filter=False top_n=None
+2026-03-01 21:39:32,815 - kpi_utils - INFO - Sorted by revenue_musd descending
+2026-03-01 21:39:32,817 - kpi_utils - INFO - rank_by_metric completed in 0.02 seconds
+2026-03-01 21:39:33,120 - kpi_utils - INFO - Starting rank_by_metric metric=budget_musd ascending=False filter=False top_n=None
+2026-03-01 21:39:33,135 - kpi_utils - INFO - Sorted by budget_musd descending
+2026-03-01 21:39:33,142 - kpi_utils - INFO - rank_by_metric completed in 0.02 seconds
+2026-03-01 21:39:33,363 - kpi_utils - INFO - Starting rank_by_metric metric=profit ascending=False filter=False top_n=None
+2026-03-01 21:39:33,380 - kpi_utils - INFO - Sorted by profit descending
+2026-03-01 21:39:33,383 - kpi_utils - INFO - rank_by_metric completed in 0.02 seconds
+2026-03-01 21:39:33,738 - kpi_utils - INFO - Starting rank_by_metric metric=profit ascending=True filter=False top_n=None
+2026-03-01 21:39:33,750 - kpi_utils - INFO - Sorted by profit ascending
+2026-03-01 21:39:33,752 - kpi_utils - INFO - rank_by_metric completed in 0.01 seconds
+2026-03-01 21:39:34,157 - kpi_utils - INFO - Starting rank_by_metric metric=roi ascending=False filter=False top_n=None
+2026-03-01 21:39:34,176 - kpi_utils - INFO - Sorted by roi descending
+2026-03-01 21:39:34,178 - kpi_utils - INFO - rank_by_metric completed in 0.02 seconds
+2026-03-01 21:39:34,535 - kpi_utils - INFO - Starting rank_by_metric metric=roi ascending=True filter=False top_n=None
+2026-03-01 21:39:34,552 - kpi_utils - INFO - Sorted by roi ascending
+2026-03-01 21:39:34,553 - kpi_utils - INFO - rank_by_metric completed in 0.02 seconds
+2026-03-01 21:39:34,815 - kpi_utils - INFO - Starting rank_by_metric metric=vote_count ascending=False filter=False top_n=None
+2026-03-01 21:39:34,829 - kpi_utils - INFO - Sorted by vote_count descending
+2026-03-01 21:39:34,831 - kpi_utils - INFO - rank_by_metric completed in 0.02 seconds
+2026-03-01 21:39:35,053 - kpi_utils - INFO - Starting rank_by_metric metric=vote_average ascending=False filter=False top_n=None
+2026-03-01 21:39:35,064 - kpi_utils - INFO - Sorted by vote_average descending
+2026-03-01 21:39:35,066 - kpi_utils - INFO - rank_by_metric completed in 0.01 seconds
+2026-03-01 21:39:35,287 - kpi_utils - INFO - Starting rank_by_metric metric=vote_average ascending=True filter=False top_n=None
+2026-03-01 21:39:35,302 - kpi_utils - INFO - Sorted by vote_average ascending
+2026-03-01 21:39:35,303 - kpi_utils - INFO - rank_by_metric completed in 0.02 seconds
+2026-03-01 21:39:35,543 - kpi_utils - INFO - Starting rank_by_metric metric=popularity ascending=False filter=False top_n=None
+2026-03-01 21:39:35,559 - kpi_utils - INFO - Sorted by popularity descending
+2026-03-01 21:39:35,562 - kpi_utils - INFO - rank_by_metric completed in 0.02 seconds
+2026-03-01 21:45:41,818 - kpi_utils - INFO - Starting rank_by_metric metric=revenue_musd ascending=False filter=False top_n=None
+2026-03-01 21:45:41,846 - kpi_utils - INFO - Sorted by revenue_musd descending
+2026-03-01 21:45:41,847 - kpi_utils - INFO - rank_by_metric completed in 0.03 seconds
+2026-03-01 21:45:42,207 - kpi_utils - INFO - Starting rank_by_metric metric=budget_musd ascending=False filter=False top_n=None
+2026-03-01 21:45:42,225 - kpi_utils - INFO - Sorted by budget_musd descending
+2026-03-01 21:45:42,229 - kpi_utils - INFO - rank_by_metric completed in 0.02 seconds
+2026-03-01 21:45:42,463 - kpi_utils - INFO - Starting rank_by_metric metric=profit ascending=False filter=False top_n=None
+2026-03-01 21:45:42,493 - kpi_utils - INFO - Sorted by profit descending
+2026-03-01 21:45:42,496 - kpi_utils - INFO - rank_by_metric completed in 0.03 seconds
+2026-03-01 21:45:42,995 - kpi_utils - INFO - Starting rank_by_metric metric=profit ascending=True filter=False top_n=None
+2026-03-01 21:45:43,013 - kpi_utils - INFO - Sorted by profit ascending
+2026-03-01 21:45:43,016 - kpi_utils - INFO - rank_by_metric completed in 0.02 seconds
+2026-03-01 21:45:43,465 - kpi_utils - INFO - Starting rank_by_metric metric=roi ascending=False filter=False top_n=None
+2026-03-01 21:45:43,484 - kpi_utils - INFO - Sorted by roi descending
+2026-03-01 21:45:43,485 - kpi_utils - INFO - rank_by_metric completed in 0.02 seconds
+2026-03-01 21:45:43,762 - kpi_utils - INFO - Starting rank_by_metric metric=roi ascending=True filter=False top_n=None
+2026-03-01 21:45:43,782 - kpi_utils - INFO - Sorted by roi ascending
+2026-03-01 21:45:43,784 - kpi_utils - INFO - rank_by_metric completed in 0.02 seconds
+2026-03-01 21:45:44,033 - kpi_utils - INFO - Starting rank_by_metric metric=vote_count ascending=False filter=False top_n=None
+2026-03-01 21:45:44,047 - kpi_utils - INFO - Sorted by vote_count descending
+2026-03-01 21:45:44,049 - kpi_utils - INFO - rank_by_metric completed in 0.02 seconds
+2026-03-01 21:45:44,285 - kpi_utils - INFO - Starting rank_by_metric metric=vote_average ascending=False filter=False top_n=None
+2026-03-01 21:45:44,299 - kpi_utils - INFO - Sorted by vote_average descending
+2026-03-01 21:45:44,301 - kpi_utils - INFO - rank_by_metric completed in 0.02 seconds
+2026-03-01 21:45:44,604 - kpi_utils - INFO - Starting rank_by_metric metric=vote_average ascending=True filter=False top_n=None
+2026-03-01 21:45:44,619 - kpi_utils - INFO - Sorted by vote_average ascending
+2026-03-01 21:45:44,622 - kpi_utils - INFO - rank_by_metric completed in 0.02 seconds
+2026-03-01 21:45:45,068 - kpi_utils - INFO - Starting rank_by_metric metric=popularity ascending=False filter=False top_n=None
+2026-03-01 21:45:45,085 - kpi_utils - INFO - Sorted by popularity descending
+2026-03-01 21:45:45,087 - kpi_utils - INFO - rank_by_metric completed in 0.02 seconds
