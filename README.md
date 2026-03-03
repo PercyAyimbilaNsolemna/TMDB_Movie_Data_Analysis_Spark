@@ -145,8 +145,8 @@ graph LR
 |    ├── removeColumns.py
 |
 |
-├──  config
-|    ├── config.py
+├──  src/                     → utils and reusable function definitions  
+|    
 |
 ├──   config/
 │   └──  config.py                → Spark & environment configuration
@@ -197,8 +197,7 @@ graph LR
 **Computed Metrics**
 - `Profit = Revenue - Budget`
 - `ROI = Revenue / Budget`
-- `Profit Margin = Profit / Revenue`
-
+- `movie_type = Standalone or Franchise`
 </td>
 <td width="50%">
 
@@ -249,17 +248,6 @@ Sort: Rating (DESC)
 Director: Quentin Tarantino
 Cast: Uma Thurman
 ```
-
-</td>
-<td>
-
-**Technical Approach**
-
-- Array explosion for nested fields
-- Multi-dimensional filtering
-- Join optimization
-- Window-based ranking
-- Predicate pushdown
 
 </td>
 </tr>
@@ -325,9 +313,7 @@ Cast: Uma Thurman
 
 <div align="center">
 
-### **Publication-Ready Analytics**
-
-*Spark-computed, Pandas-visualized approach for optimal performance*
+### **Spark-computed, Pandas-visualized approach for optimal performance**
 
 </div>
 
@@ -366,31 +352,35 @@ Cast: Uma Thurman
 
 </div>
 
-### **Installation**
+## Installation
+
+### 1 — Clone the Repository
 
 ```bash
-# Clone the repository
 git clone https://github.com/PercyAyimbilaNsolemna/TMDB_Movie_Data_Analysis_Spark.git
 cd TMDB_Movie_Data_Analysis_Spark
-
-# Start docker
-docker compose up --build
-
-# Copy lab token
-Copy the lab token generated after docker id done building
-
-Click on Select kernrl in the notebook
-
-Click on Existing Jupyter Server
-
-Paste the lab token generated
-
-Press Enter to select the IP generated 
-
-Click on Python 3 to get connected to the lab server
-
-All is set up to start running the notebook
 ```
+
+### 2 — Start Docker
+
+```bash
+docker compose up --build
+```
+
+### 3 — Connect to the Notebook
+
+Once Docker finishes building, follow these steps to connect VS Code to the Jupyter server:
+
+| Step | Action |
+|------|--------|
+| 1 | Copy the lab token generated in the terminal after the build completes |
+| 2 | Click **Select Kernel** in the notebook |
+| 3 | Click **Existing Jupyter Server** |
+| 4 | Paste the lab token and press `Enter` |
+| 5 | Select the IP address generated |
+| 6 | Click **Python 3** to connect to the lab server |
+
+You are now ready to run the notebook.
 
 ---
 
